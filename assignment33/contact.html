@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Assignment 3.3 for Inholland - Contact Form" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 3.3 | Inholland</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Assignment 3.3 | Inholland</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form action="vote.php" method="post">
+      <h2>Get in Touch</h2>
+
+      <label for="name">Give the name*</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Give your email*</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="website">Your website</label>
+      <input type="text" id="website" name="website" placeholder="http://">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message here..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2001 Inholland. All rights reserved.</p>
+  </footer>
+</body>
+</html>
