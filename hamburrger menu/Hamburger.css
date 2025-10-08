@@ -1,0 +1,60 @@
+#menu-toggle 
+{
+    display: none;
+}
+.hamburger 
+{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer; 
+}
+.hamburger span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px; 
+    background-color: #f0f; 
+}
+.hamburger span:nth-child(1) 
+{
+    top: 0; 
+}
+.hamburger span:nth-child(2)
+{
+    top: 9px; 
+}
+.hamburger span:nth-child(3) {
+    bottom: 0; 
+}
+.menu 
+{
+    position: absolute;
+    top: 0;
+    right: -300px; 
+    width: 300px; 
+    height: 100%;
+    background-color: #f0f;
+    color: #fff;
+}
+.menu ul 
+{
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+.menu ul li 
+{
+    padding: 10px; 
+}
+
+.menu ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+}
+#menu-toggle:checked ~ .menu 
+{
+    left: 0;
+}
