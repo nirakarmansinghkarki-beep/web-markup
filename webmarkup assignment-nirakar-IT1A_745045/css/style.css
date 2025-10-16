@@ -1,217 +1,126 @@
-/* style.css
-   Daycare Connect — shared stylesheet
-   - Place in /css/style.css
-   - Pages will reference this with: <link rel="stylesheet" type="text/css" href="/css/style.css">
-   - Uses rem/em for relative units, includes comments, and meets assignment "excellent" requirements.
+/* === GLOBAL THEME COLORS ===
+   Primary (calm blue): #A5D8F3
+   Secondary (warm yellow): #FDDFA9
+   Accent (soft coral): #F6B2A1
 */
 
-/* =========================
-   Root variables & reset
-   ========================= */
-:root{
-  --primary: #A5D8F3;    /* 60% light blue */
-  --secondary: #FDDFA9;  /* 30% soft sunshine yellow */
-  --accent: #F6B2A1;     /* 10% peach/coral */
-  --text: #214a57;
-  --muted: #6b7b80;
-  --max-width: 72rem;    /* ~1152px */
-  --gap: 1rem;
-  --radius: 0.75rem;
-  --focus: rgba(165,216,243,0.55);
-  font-size: 16px;
+/* === GLOBAL STYLES === */
+body {
+  background-color: #A5D8F3;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/* Simple reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-html{font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); background:#f7feff}
-body{display:flex; justify-content:center; padding:1rem}
-main{width:100%; max-width:var(--max-width); padding:0.5rem}
-
-/* =========================
-   Header & logo
-   ========================= */
-/* header uses position: relative (position property #1) */
-header{
-  background:var(--primary);
-  border-radius:var(--radius);
-  padding:1rem;
-  position:relative;
-  overflow:auto; /* ensure floats are contained without using extra divs */
-  margin-bottom:1rem;
+/* === HEADER === */
+header {
+  background-color: #FDDFA9;
+  border-bottom: 4px solid #F6B2A1;
+  text-align: center;
+  padding: 1.5rem 1rem;
 }
 
-/* Logo uses float (meets float requirement) */
-figure.site-logo{float:left; margin-right:1rem}
-figure.site-logo img{display:block; width:6.5rem; height:auto}
-figcaption.logo-caption{display:none} /* decorative caption present for semantics */
-
-/* Title area — avoid using div; use header > h1 & p */
-header > h1{
-  font-family: "Poppins", sans-serif;
-  font-size:1.6rem;
-  margin-top:0.25rem;
-}
-header > p.site-tagline{
-  margin-top:0.3rem;
-  text-transform:uppercase; /* required */
-  letter-spacing:0.08em;     /* required */
-  font-size:0.95rem;
+.site-logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* =========================
-   Language toggle (CSS-only)
-   - Using a visually-hidden checkbox and labels
-   - Place <input id="lang-toggle" type="checkbox"> in header of each page
-   - When checked => Dutch (nl) shows, English (en) hides
-   ========================= */
-#lang-toggle{ /* visually hide but keep accessible */
-  position:absolute;
-  left:-9999px;
-  width:1px;height:1px;overflow:hidden;
+h1 {
+  color: #F6B2A1;
+  font-size: 2.2rem;
+  margin: 0.5rem 0 0.2rem 0;
 }
 
-/* Toggle control (label) styling; labels placed next to each other in header */
-label.lang-label{
-  display:inline-block;
-  padding:0.4rem 0.6rem;
-  border-radius:0.5rem;
-  border:2px solid rgba(0,0,0,0.06);
-  cursor:pointer;
-  background:transparent;
-  font-size:0.9rem;
-}
-label.lang-label:focus{outline:3px solid var(--focus)}
-
-/* default states: show English, hide Dutch */
-.en{display:inline}
-.nl{display:none}
-
-/* When checkbox is checked, show .nl and hide .en
-   selector uses sibling combinator: #lang-toggle:checked ~ main ... (works when checkbox placed before main)
-*/
-#lang-toggle:checked ~ main .en{display:none}
-#lang-toggle:checked ~ main .nl{display:inline}
-
-/* Also style active label visually using :checked and adjacent-sibling technique
-   (requires HTML structure: <input id="lang-toggle"><label for="lang-toggle" class="lang-label">...)</* */
-#lang-toggle:checked + label.lang-label.lang-nl{box-shadow:0 0 0 3px rgba(0,0,0,0.04)}
-#lang-toggle:not(:checked) + label.lang-label.lang-en{box-shadow:0 0 0 3px rgba(0,0,0,0.04)}
-
-/* =========================
-   Top navigation (semantic nav)
-   - Use > selector as required (nav.primary > ul > li a)
-   ========================= */
-nav.primary{clear:both; margin-top:0.8rem; display:flex; justify-content:space-between; align-items:center}
-nav.primary > ul{list-style:none; display:flex; gap:0.75rem}
-nav.primary a{display:inline-block; padding:0.45rem 0.6rem; text-decoration:none; border-radius:0.45rem}
-nav.primary a:hover{text-decoration:underline}
-nav.primary a:visited{opacity:0.9}
-
-/* =========================
-   Page layout: main content & aside
-   - Use flexbox for layout (Flexbox required)
-   ========================= */
-.section-wrap{display:flex; gap:var(--gap); align-items:flex-start}
-aside.sidebar{width:22%; min-width:14rem}
-section.content{flex:1}
-
-/* Card list using semantic ul > li */
-ul.cards{list-style:none; display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem}
-ul.cards > li{flex:1 1 calc(50% - 1rem); min-width:18rem; background:var(--secondary); padding:1rem; border-radius:0.5rem; border:3px solid rgba(0,0,0,0.03)}
-
-/* profile article with floating image (float used again) */
-article.profile{background:linear-gradient(180deg,#fff9e6,#fff); padding:1rem; border-radius:0.5rem; overflow:auto}
-article.profile figure{float:left; margin-right:0.9rem; width:7.5rem}
-
-/* =========================
-   Table styles (compare)
-   - nth-child used to color even/odd rows
-   ========================= */
-table.compare{width:100%; border-collapse:collapse; margin-top:0.6rem; font-size:0.95rem}
-table.compare th, table.compare td{border:1px solid #cfcfcf; padding:0.6rem; text-align:left}
-table.compare tr:nth-child(even){background:#CFF} /* required nth-child usage */
-table.compare tr:nth-child(odd){background:#FFF}
-
-/* =========================
-   Forms (contact & visit)
-   - label, legend, input[type=email], input[type=submit] present in HTML pages
-   ========================= */
-form.contact-form fieldset,
-form.site-form fieldset{border:2px dashed var(--primary); padding:0.9rem; border-radius:0.5rem; margin-top:0.6rem}
-label{display:block; margin-bottom:0.35rem; font-weight:700}
-input[type="text"], input[type="email"], textarea, select{width:100%; padding:0.65rem; border-radius:0.45rem; border:1px solid #ddd; font-size:1rem; margin-bottom:0.6rem}
-input[type="submit"]{background:var(--accent); border:none; padding:0.66rem 1rem; border-radius:0.45rem; cursor:pointer; font-weight:800; text-transform:uppercase}
-
-/* accessibility focus */
-a:focus, button:focus, input:focus, select:focus, textarea:focus{outline:3px solid var(--focus)}
-
-/* =========================
-   Pseudo-element & pseudo-class examples
-   - ::first-letter, :hover, :visited are used
-   ========================= */
-p::first-letter{font-size:1.6rem; font-weight:800; float:left; margin-right:0.35rem}
-a:hover{text-decoration:underline}
-a:visited{color:rgba(33,74,87,0.8)}
-
-/* selecting elements with > (used earlier in nav.primary > ul) and comma (multiple selectors) */
-header, footer, nav{box-shadow:none}
-
-/* nth-child on lists (example for reviews list) */
-ul.reviews > li:nth-child(even){background:linear-gradient(90deg,#f7f7f7,#fff)}
-
-/* =========================
-   Cookie message with z-index 9999
-   ========================= */
-aside#cookie{position:fixed; bottom:1rem; right:1rem; background:#fff; padding:0.6rem; border-radius:0.5rem; box-shadow:0 6px 12px rgba(0,0,0,0.12); z-index:9999}
-aside#cookie button{margin-left:0.5rem}
-
-/* =========================
-   Utility elements and image handling
-   - Images referenced in pages: use /img/... and each page will include at least 3 images
-   ========================= */
-figure img{max-width:100%; height:auto; display:block}
-figcaption{font-size:0.9rem; color:var(--muted); margin-top:0.35rem}
-
-/* =========================
-   Footer
-   ========================= */
-footer{margin-top:1rem; padding:0.8rem; text-align:center; font-size:0.95rem; color:var(--muted)}
-footer small{display:block; margin-top:0.5rem}
-
-/* =========================
-   Position properties: uses relative, absolute, fixed (meets >=2 position props rule)
-   ========================= */
-/* header is relative (earlier), cookie message is fixed, and some badges may use absolute */
-.badge{position:absolute; top:-0.6rem; right:-0.6rem; background:var(--accent); padding:0.25rem 0.5rem; border-radius:0.45rem; font-weight:700}
-
-/* =========================
-   Responsive: at least two media queries (<=768px and <=480px)
-   ========================= */
-@media (max-width:768px){
-  .section-wrap{flex-direction:column}
-  aside.sidebar{width:100%}
-  ul.cards > li{flex:1 1 100%}
-  figure.site-logo img{width:5rem}
-  nav.primary{flex-direction:column; gap:0.4rem}
-  /* ensure language labels stack nicely */
-  label.lang-label{display:inline-block; margin-right:0.35rem}
+p.site-tagline {
+  margin: 0;
+  font-style: italic;
+  color: #555;
 }
 
-/* extra small phones */
-@media (max-width:480px){
-  header > h1{font-size:1.25rem}
-  p.site-tagline{font-size:0.85rem}
-  figure.site-logo img{width:4.25rem}
+/* === NAVIGATION === */
+nav {
+  margin-top: 1rem;
 }
 
-/* =========================
-   Typography helpers: letter-spacing, line-height, text-indent, word-spacing (requirements)
-   ========================= */
-p{letter-spacing:0.02em; line-height:1.6; text-indent:0.6rem; word-spacing:0.12rem}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-/* =========================
-   Comments & note for graders
-   - CSS includes comments and uses rem/em relative units where useful
-   - Do not edit the selectors for the CSS-only language toggle unless you replicate the same HTML structure
-   ========================= */
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  background-color: #F6B2A1;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #FDDFA9;
+  color: #333;
+}
+
+/* === MAIN CONTENT === */
+main {
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: #F6B2A1;
+  border-bottom: 2px solid #FDDFA9;
+  padding-bottom: 0.5rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #FDDFA9;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  border-top: 4px solid #F6B2A1;
+  font-size: 0.9rem;
+}
+
+/* === UTILITIES === */
+.button {
+  background-color: #F6B2A1;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #FDDFA9;
+  color: #333;
+}
