@@ -1,126 +1,61 @@
-/* === GLOBAL THEME COLORS ===
-   Primary (calm blue): #A5D8F3
-   Secondary (warm yellow): #FDDFA9
-   Accent (soft coral): #F6B2A1
-*/
+/* === LANGUAGE TOGGLE === */
+.nl { display: none; } /* Hide Dutch by default */
 
-/* === GLOBAL STYLES === */
-body {
-  background-color: #A5D8F3;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* Show Dutch and hide English when checkbox is checked */
+.lang-toggle:checked ~ header .en,
+.lang-toggle:checked ~ main .en,
+.lang-toggle:checked ~ footer .en {
+  display: none;
 }
 
-/* === HEADER === */
-header {
-  background-color: #FDDFA9;
-  border-bottom: 4px solid #F6B2A1;
-  text-align: center;
-  padding: 1.5rem 1rem;
+.lang-toggle:checked ~ header .nl,
+.lang-toggle:checked ~ main .nl,
+.lang-toggle:checked ~ footer .nl {
+  display: inline;
 }
 
-.site-logo img {
-  width: 180px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-h1 {
-  color: #F6B2A1;
-  font-size: 2.2rem;
-  margin: 0.5rem 0 0.2rem 0;
-}
-
-p.site-tagline {
-  margin: 0;
-  font-style: italic;
-  color: #555;
-}
-
-/* === NAVIGATION === */
-nav {
-  margin-top: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  background-color: #F6B2A1;
-  color: white;
-  padding: 0.6rem 1rem;
+/* Style for language labels */
+.lang-label {
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #FDDFA9;
-  color: #333;
-}
-
-/* === MAIN CONTENT === */
-main {
-  background-color: #fff;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-main h2 {
-  color: #F6B2A1;
-  border-bottom: 2px solid #FDDFA9;
-  padding-bottom: 0.5rem;
-}
-
-main img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 1rem;
-  margin: 2rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* === FOOTER === */
-footer {
-  background-color: #FDDFA9;
-  color: #333;
-  text-align: center;
-  padding: 1rem;
-  border-top: 4px solid #F6B2A1;
-  font-size: 0.9rem;
-}
-
-/* === UTILITIES === */
-.button {
-  background-color: #F6B2A1;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
   font-weight: 600;
+  margin: 0 0.3rem;
+  background-color: #F6B2A1;
+  color: white;
   display: inline-block;
   transition: all 0.3s ease;
 }
 
-.button:hover {
-  background-color: #FDDFA9;
-  color: #333;
+/* Adjust toggle colors when checked */
+.lang-toggle:checked + .lang-label.lang-en { background-color: #FDDFA9; color: #333; }
+.lang-toggle:checked + .lang-label.lang-en + .lang-label.lang-nl { background-color: #F6B2A1; color: white; }
+
+/* === SEARCH AREA === */
+.search-area {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.search-area input[type="text"] {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #FDDFA9;
+  border-radius: 0.5rem;
+  width: 200px;
+  margin-right: 0.5rem;
+}
+
+.search-area .button {
+  padding: 0.6rem 1.2rem;
+}
+
+.search-area .search-info {
+  margin-top: 1rem;
+  color: #555;
 }

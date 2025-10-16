@@ -19,7 +19,8 @@
   <h1><span class="en">Daycare Connect</span><span class="nl">Kinderopvang Verbinden</span></h1>
   <p class="site-tagline"><span class="en">Connecting families and care centers</span><span class="nl">Gezinnen en opvangcentra verbinden</span></p>
 
-  <input id="lang-toggle" type="checkbox" aria-label="Language toggle">
+  <!-- Language Toggle -->
+  <input id="lang-toggle" type="checkbox" class="lang-toggle">
   <label for="lang-toggle" class="lang-label lang-en">🇬🇧 English</label>
   <label for="lang-toggle" class="lang-label lang-nl">🇳🇱 Nederlands</label>
 
@@ -36,6 +37,20 @@
 </header>
 
 <main>
+
+  <!-- === POSTAL CODE SEARCH AREA === -->
+  <section class="search-area">
+    <h2><span class="en">Find a Daycare Near You</span><span class="nl">Vind een opvangcentrum bij u in de buurt</span></h2>
+    <form action="#" method="get">
+      <input type="text" name="postal-code" placeholder="Postal Code" required>
+      <button type="submit" class="button"><span class="en">Search</span><span class="nl">Zoeken</span></button>
+    </form>
+    <p class="search-info">
+      <span class="en">Enter your postal code to find nearby daycares.</span>
+      <span class="nl">Voer uw postcode in om nabijgelegen opvangcentra te vinden.</span>
+    </p>
+  </section>
+
   <section class="content">
     <figure>
       <img src="/img/home-banner.jpg" alt="Children playing at daycare" title="Children at daycare">
@@ -46,30 +61,4 @@
     <p><span class="en">
       Our platform helps parents discover trusted daycare centers through verified reviews, side-by-side comparisons, and simple scheduling for tours.
     </span><span class="nl">
-      Ons platform helpt ouders om betrouwbare opvangcentra te vinden via gecontroleerde beoordelingen, vergelijkingen en eenvoudige planning van rondleidingen.
-    </span></p>
-
-    <section aria-label="Highlights">
-      <figure>
-        <img src="img/homepage3.jpg" alt="Parent holding child's hand" title="Family together">
-        <figcaption><span class="en">Trusted by families</span><span class="nl">Vertrouwd door gezinnen</span></figcaption>
-      </figure>
-      <figure>
-        <img src="img/homepage2.jpg" alt="Child drawing at daycare" title="Creative learning">
-        <figcaption><span class="en">Learning through creativity</span><span class="nl">Leren door creativiteit</span></figcaption>
-      </figure>
-      <figure>
-        <img src="img/homepage1.png" alt="Daycare staff smiling" title="Daycare community">
-        <figcaption><span class="en">A caring community</span><span class="nl">Een zorgzame gemeenschap</span></figcaption>
-      </figure>
-    </section>
-  </section>
-</main>
-
-<footer>
-  <p><span class="en">© 2025 Daycare Connect. All rights reserved.</span><span class="nl">© 2025 Kinderopvang Verbinden. Alle rechten voorbehouden.</span></p>
-  <small><span class="en">Find care you can trust.</span><span class="nl">Vind opvang die u kunt vertrouwen.</span></small>
-</footer>
-
-</body>
-</html>
+      Ons pla
