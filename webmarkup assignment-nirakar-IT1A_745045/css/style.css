@@ -127,17 +127,7 @@ header > * {
   color: var(--secondary);
 }
 
-.search-bar-container {
-  margin: 1em auto;
-  max-width: 300px;
-}
-
-.search-bar {
-  width: 100%;
-  padding: 0.5em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
+/* Removed search-bar-container and search-bar classes */
 
 /* --------------------------------
    Hamburger Menu (Mobile)
@@ -241,6 +231,14 @@ figcaption {
   font-size: 0.9rem;
   color: #555;
   margin-top: 0.3em;
+}
+
+.search-section {
+  margin: 2em 0;
+}
+
+.search-section form {
+  margin: 0;
 }
 
 /* --------------------------------
@@ -386,10 +384,6 @@ header > nav ul > li > a:hover {
 
   .left-image, .right-image {
     margin: 1em 0;
-  }
-
-  .search-bar-container {
-    max-width: 100%;
   }
 }
 

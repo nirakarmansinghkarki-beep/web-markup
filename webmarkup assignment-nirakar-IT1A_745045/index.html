@@ -14,12 +14,9 @@
   <header style="background-image: url('img/homepage1.png');">
     <figure class="site-logo">
       <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo" style="width: 140px;">
-      
     </figure>
-
     <h1 class="site-title">Daycare Connect</h1>
     <p class="site-tagline">Connecting families and care centers</p>
-
     <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,12 +26,10 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
-
     <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -44,21 +39,22 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
-    <div class="search-bar-container">
-      <input type="text" id="search-bar" placeholder="Search daycare centers..." class="search-bar">
-    </div>
   </header>
-
   <main>
     <section>
       <h2>Welcome</h2>
       <p>Find, compare, and book visits to daycare centers near you.</p>
-
       <blockquote>
         "A nurturing environment is the foundation of a child's growth and happiness." - Daycare Connect Team
       </blockquote>
-
+      <form class="search-section">
+        <fieldset>
+          <legend>Search by Postal Code</legend>
+          <label for="postal-code">Enter Postal Code:</label>
+          <input type="text" id="postal-code" name="postal-code" placeholder="e.g., 12345" required>
+          <input type="submit" value="Search Daycares">
+        </fieldset>
+      </form>
       <article class="content-block">
         <figure class="left-image">
           <img src="img/homepage3.jpg" alt="Mother and child playing indoors" title="Indoor Play" style="width: 200px; height: auto;">
@@ -66,7 +62,6 @@
         </figure>
         <p>Our indoor play areas are thoughtfully designed to foster social interaction and early development. Parents cherish moments of their children engaging with peers, building confidence through play. The cozy space is equipped with safe, colorful toys and a nurturing environment, ensuring a joyful experience every day.</p>
       </article>
-
       <article class="content-block">
         <figure class="left-image">
           <img src="img/homepage2.png" alt="Families in a classroom" title="Classroom" style="width: 200px; height: auto;">
@@ -76,11 +71,9 @@
       </article>
     </section>
   </main>
-
   <aside class="cookies" role="region" aria-label="Cookie message">
     We use cookies to improve the site. <a href="privacy.html">More info</a>
   </aside>
-
   <footer>
     &copy; 2025 Daycare Connect. All rights reserved.
   </footer>
