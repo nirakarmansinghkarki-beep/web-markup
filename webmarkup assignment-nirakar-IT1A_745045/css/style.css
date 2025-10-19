@@ -50,10 +50,30 @@ header {
   padding: 1em;
   text-align: center;
   position: relative;
+  background-image: url('img/homepage3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
 }
 
 .site-logo img {
-  width: 80px;
+  width: 100px;
   float: left;
   margin-right: 1em;
 }
@@ -190,8 +210,22 @@ blockquote {
   border-radius: 8px;
 }
 
+.content-block {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.left-image {
+  margin-right: 1em;
+}
+
+.right-image {
+  margin-left: 1em;
+}
+
 figure {
-  margin: 1.5em auto;
+  margin: 0;
   text-align: center;
 }
 
@@ -321,6 +355,15 @@ header > nav ul > li > a:hover {
 
   .site-logo img {
     width: 60px;
+  }
+
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-image, .right-image {
+    margin: 1em 0;
   }
 }
 

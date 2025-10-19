@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="author" content="Your Full Name">
   <meta name="description" content="Get in touch with Daycare Connect to learn more about daycare services and partnerships.">
-  <meta name="keywords" content="contact, daycare, message, help, connect">
+  <meta name="keywords" content="contact, daycare, message, support, connect">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daycare Connect | Contact</title>
   <link rel="icon" type="image/png" href="img/logo.png">
@@ -13,17 +13,21 @@
 
 <body>
   <header>
-    <figure class="site-logo">
-      <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
-      <figcaption>Daycare Connect Logo</figcaption>
-    </figure>
-
     <img src="img/contact1.jpg" alt="Contact support" title="Contact Daycare Connect" class="header-img">
 
-    <h1 class="site-title">Contact Us</h1>
-    <p class="site-tagline">We’d love to hear from you!</p>
+    <div class="site-brand">
+      <figure class="site-logo">
+        <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
+        <figcaption>Daycare Connect Logo</figcaption>
+      </figure>
 
-    <nav class="desktop-menu">
+      <div class="site-heading">
+        <h1 class="site-title">Contact Us</h1>
+        <p class="site-tagline">We’d love to hear from you!</p>
+      </div>
+    </div>
+
+    <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
@@ -31,13 +35,13 @@
         <li><a href="visit.html">Visits</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <input type="text" placeholder="Search..." class="search-bar">
+      <input type="text" placeholder="Search..." class="search-bar" aria-label="Search site">
     </nav>
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <input type="checkbox" id="menu-toggle" aria-hidden="true">
+    <label for="menu-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
 
-    <nav class="mobile-menu">
+    <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
@@ -45,7 +49,7 @@
         <li><a href="visit.html">Visits</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <input type="text" placeholder="Search..." class="search-bar">
+      <input type="text" placeholder="Search..." class="search-bar" aria-label="Mobile search">
     </nav>
   </header>
 
@@ -53,9 +57,10 @@
     <section>
       <h2>Reach Out</h2>
       <p>Have questions or suggestions? Use the form below to get in touch with our friendly support team.</p>
+
       <blockquote>“Communication builds connection.”</blockquote>
 
-      <form>
+      <form action="#" method="post" novalidate>
         <fieldset>
           <legend>Send a Message</legend>
 
@@ -76,6 +81,7 @@
         <img src="img/contact2.png" alt="Support team" title="Customer support">
         <figcaption>Friendly support team ready to help.</figcaption>
       </figure>
+
       <figure>
         <img src="img/contact3.jpg" alt="Children playing" title="Playtime">
         <figcaption>Playtime brings smiles and laughter.</figcaption>
