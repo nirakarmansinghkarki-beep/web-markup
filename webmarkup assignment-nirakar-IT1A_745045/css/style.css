@@ -23,6 +23,7 @@ body {
   word-spacing: 0.1em;
   text-align: justify;
   color: var(--text);
+  padding-bottom: 3em; /* Added to prevent cookie banner overlap with content/footer */
 }
 
 img {
@@ -53,7 +54,9 @@ header {
   background-image: url('img/homepage3.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Fixes the background image */
   color: #fff;
+  min-height: 250px; /* Ensures header has enough height */
 }
 
 header::before {
@@ -313,7 +316,7 @@ input[type="submit"]:hover {
 footer {
   background: var(--primary);
   color: white;
-  text-align: center;
+  text-align: right; /* Changed to right for copyright text */
   padding: 1em;
   position: relative;
   margin-top: 3em;
@@ -362,6 +365,20 @@ header > nav ul > li > a:hover {
     width: 100px;
   }
 
+  .site-title {
+    font-size: 1.5rem; /* Reduced for better mobile display */
+  }
+
+  .site-tagline {
+    font-size: 1rem; /* Reduced for better wrapping on mobile */
+  }
+
+  header {
+    background-attachment: scroll; /* Changed to scroll on mobile for better performance and display */
+    min-height: 200px; /* Slightly reduced for mobile */
+    padding: 0.5em; /* Adjusted padding */
+  }
+
   .content-block {
     flex-direction: column;
     text-align: center;
@@ -389,15 +406,20 @@ header > nav ul > li > a:hover {
 }
 
 /* --------------------------------
-   Cookie Message (optional bonus)
+   Cookie Message
 -------------------------------- */
 .cookies {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: auto;
+  max-width: 600px;
   background: #eee;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.75rem 1.5rem;
   z-index: 9999;
-  border-top: 1px solid #ccc;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
