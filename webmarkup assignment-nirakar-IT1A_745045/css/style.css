@@ -67,7 +67,7 @@ header::before {
   z-index: 0;
 }
 
-header * {
+header > * {
   position: relative;
   z-index: 1;
 }
