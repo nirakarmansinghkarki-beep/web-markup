@@ -1,391 +1,351 @@
-/* =====================================================
-   Daycare Connect — style.css
-   Author: Nirakar (cleaned & completed)
-   ===================================================== */
-
-/* Google Fonts (used properly) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito+Sans&display=swap');
+/* --------------------------------
+   Google Font & Root Variables
+-------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 :root {
-  --primary: #A5D8F3;
-  --secondary: #FDDFA9;
-  --accent: #F6B2A1;
-  --text: #08313B;
-  --max-width: 72rem;
-  --card-bg: #ffffff;
+  --primary: #87CEFA;
+  --secondary: #FFB347;
+  --text: #333;
+  --bg: #fff;
+  --accent: #F4F9FD;
 }
 
-/* ---------------------------
-   Global rules
-   --------------------------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 100%;
-  background-color: var(--primary);
-  color: var(--text);
-  line-height: 1.6;        /* required */
-  word-spacing: 0.15rem;   /* required */
-  letter-spacing: 0.03rem; /* required */
-}
-
+/* --------------------------------
+   Global Styles
+-------------------------------- */
 body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
   margin: 0;
-  font-size: 1rem;         /* relative unit */
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  word-spacing: 0.1em;
+  text-align: justify;
+  color: var(--text);
 }
 
-/* ---------------------------
-   Header & Logo
-   --------------------------- */
-header {
-  background: linear-gradient(180deg, var(--primary), #d4eefc);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  padding: 1rem;
-  position: relative;      /* position used */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1, h2 {
+  color: var(--primary);
   text-align: center;
 }
 
-/* float used (Advanced CSS requirement) */
-.site-logo {
-  display: inline-block;
-  float: left;             /* float used */
-  margin: 0.25rem 1rem 0 1rem;
+h2::first-letter {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+/* --------------------------------
+   Header & Navigation
+-------------------------------- */
+header {
+  background: var(--accent);
+  padding: 1em;
+  text-align: center;
+  position: relative;
 }
 
 .site-logo img {
-  width: 8rem;             /* relative unit */
-  height: auto;
-  border-radius: 0.5rem;
+  width: 80px;
+  float: left;
+  margin-right: 1em;
 }
 
-.logo-caption {
-  font-size: 0.8rem;
-  color: #333;
-  margin-top: 0.2rem;
+.header-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-/* site title */
 .site-title {
-  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  margin: 0.3rem 0;
-}
-
-/* first-letter pseudo-element (Advanced CSS requirement) */
-.site-title::first-letter {
-  font-size: 2.4rem;
-  color: var(--text);
-  font-weight: 700;
+  margin-top: 0.5em;
 }
 
 .site-tagline {
-  font-size: 1rem;
-  margin: 0.2rem 0;
+  font-style: italic;
+  margin-bottom: 1em;
 }
 
-/* ---------------------------
-   Navigation
-   --------------------------- */
-.desktop-menu {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-  clear: both;             /* clear float */
-}
-
+/* --------------------------------
+   Desktop Navigation
+-------------------------------- */
 .desktop-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+.desktop-menu li {
+  margin: 0.5em 1em;
 }
 
 .desktop-menu a {
   text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase; /* required */
-}
-
-/* pseudo-class mouse over link (Advanced CSS requirement) */
-nav > ul > li > a:hover {
-  background-color: var(--secondary);
-}
-
-/* pseudo-class selected/visited link (Advanced CSS requirement) */
-nav > ul > li > a:visited {
-  opacity: 0.8;
-}
-
-/* active */
-.desktop-menu a:active {
-  background-color: var(--accent);
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Hamburger menu (mobile) */
+.desktop-menu a:hover {
+  color: var(--secondary);
+}
+
+.search-bar {
+  margin-left: 1em;
+  padding: 0.3em 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* --------------------------------
+   Hamburger Menu (Mobile)
+-------------------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2em;
+  right: 1.5em;
+}
+
+.hamburger span {
+  background: var(--primary);
+  height: 3px;
+  border-radius: 2px;
+}
+
 #menu-toggle {
   display: none;
 }
 
-.hamburger {
+.mobile-menu {
   display: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 2.4rem;
-  height: 1.6rem;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
+  background: var(--primary);
+  padding: 1em;
 }
 
-.hamburger span {
-  display: block;
-  height: 0.2rem;
-  width: 100%;
-  background-color: var(--text);
-  border-radius: 2px;
-}
-
-/* Mobile menu slide-in (position absolute used earlier) */
-.menu {
-  position: absolute;
-  top: 0;
-  right: -300px;
-  width: 250px;
-  height: 100%;
-  background-color: var(--primary);
-  padding-top: 4rem;
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.menu ul {
+.mobile-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menu li {
-  padding: 1rem;
-}
-
-.menu a {
+.mobile-menu a {
+  display: block;
+  color: white;
   text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
+  padding: 0.5em 0;
+  text-transform: uppercase;
 }
 
-/* checkbox controlling menu */
-#menu-toggle:checked ~ .menu {
-  right: 0;
+.mobile-menu a:hover {
+  color: var(--secondary);
 }
 
-/* ---------------------------
-   Language toggle
-   --------------------------- */
-.language-toggle {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0.5rem 1rem;
+/* Toggle mobile menu visibility */
+#menu-toggle:checked + .hamburger + .mobile-menu {
+  display: block;
 }
 
-.language-toggle input[type="checkbox"] {
-  display: none;
-}
-
-.toggle-label {
-  background-color: var(--secondary);
-  color: var(--text);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  user-select: none;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* default language display */
-.lang { display:block; }
-.en  { display:block; }
-.nl  { display:none; }
-
-/* ---------------------------
-   Main content area
-   --------------------------- */
+/* --------------------------------
+   Main Content
+-------------------------------- */
 main {
-  max-width: var(--max-width);
-  margin: 1rem auto;
-  padding: 1rem;
-  background-color: var(--card-bg);
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  clear: both;
+  padding: 1em 2em;
 }
 
-/* Figures */
+section {
+  max-width: 1000px;
+  margin: auto;
+  background: #fafafa;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+blockquote {
+  font-style: italic;
+  background: #f0f8ff;
+  border-left: 5px solid var(--primary);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 8px;
+}
+
 figure {
-  margin: 1rem auto;
+  margin: 1.5em auto;
   text-align: center;
-  width: 90%;
-}
-
-figure img {
-  width: 100%;
-  border-radius: 0.75rem;
-  height: auto;
 }
 
 figcaption {
   font-size: 0.9rem;
-  color: #333;
-  margin-top: 0.4rem;
+  color: #555;
+  margin-top: 0.3em;
 }
 
-/* sample card-like article */
-article {
-  margin-bottom: 1.2rem;
-  padding: 0.8rem;
-  border: 1px solid #ddd;   /* border-width/style/color used (Advanced CSS required) */
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ddd;
-  border-radius: 0.6rem;
+/* --------------------------------
+   Tables (if used)
+-------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
 }
 
-/* use > selector (Advanced CSS requirement) */
-article > h3 {
-  margin: 0;
-  font-size: 1.2rem;
+th, td {
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-/* text indent required */
-article p {
-  text-indent: 1.2rem; /* required */
+tr:nth-child(odd) {
+  background-color: #fff;
 }
 
-/* ---------------------------
-   Zip-search and forms
-   --------------------------- */
-.zip-search fieldset,
-form fieldset {
-  border: 2px solid var(--secondary);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+tr:nth-child(even) {
+  background-color: #cff;
 }
 
-.zip-search legend,
-form legend {
-  font-weight: 700;
+/* --------------------------------
+   Forms
+-------------------------------- */
+form {
+  margin: 2em 0;
+}
+
+fieldset {
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+legend {
+  color: var(--primary);
+  font-weight: bold;
 }
 
 label {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 1em;
 }
 
-/* inputs */
-input[type="text"],
-input[type="email"],
-input[type="date"],
-textarea {
+input, textarea {
   width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-  border-radius: 0.4rem;
-  border: 1px solid #aaa;
-  font-size: 1rem;
+  padding: 0.7em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 input[type="submit"] {
-  background-color: var(--accent);
+  background: var(--primary);
   color: white;
   border: none;
-  font-weight: 600;
-  padding: 0.7rem;
+  margin-top: 1em;
   cursor: pointer;
-  text-transform: uppercase; /* required */
-  margin-top: 0.5rem;
+  transition: background 0.3s;
 }
 
-/* ---------------------------
-   Table styling (compare page)
-   using nth-child to color even/odd rows
-   (Advanced CSS requirement)
-   --------------------------- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+input[type="submit"]:hover {
+  background: var(--secondary);
 }
 
-table th,
-table td {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  text-align: left;
+/* --------------------------------
+   Footer
+-------------------------------- */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  margin-top: 3em;
+  border-top: 5px solid var(--secondary);
 }
 
-table tr:nth-child(even) {
-  background: #CFF;  /* even rows */
+/* --------------------------------
+   Utility & Advanced Selectors
+-------------------------------- */
+p:first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--secondary);
 }
 
-table tr:nth-child(odd) {
-  background: #FFF;  /* odd rows */
+/* Descendant selector */
+header > nav ul > li > a:hover {
+  text-decoration: underline;
 }
 
-/* ---------------------------
-   Cookie message (z-index requirement)
-   --------------------------- */
-.cookie-msg {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-  background: rgba(255,255,255,0.95);
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  z-index: 9999; /* required */
-  border: 1px solid #ccc;
-}
-
-/* ---------------------------
-   Utility selectors demonstrating "," usage
-   --------------------------- */
-h2, h3, p {
-  margin: 0.5rem 0;
-}
-
-/* ---------------------------
-   Responsive queries (at least 2 devices)
-   Smartphone <=768px, Tablet <=1024px, Desktop >1024px
-   --------------------------- */
-@media (max-width: 1024px) {
-  html { font-size: 95%; }     /* tablet */
-  .desktop-menu { display:none; }
-  .hamburger { display:flex; }
-  .menu { width: 60%; }
-  figure { width: 95%; }
-}
-
+/* --------------------------------
+   Responsive Design
+-------------------------------- */
 @media (max-width: 768px) {
-  html { font-size: 92%; }     /* smartphone */
-  .site-logo { float:none; display:block; margin: 0 auto 0.5rem auto; }
-  .hamburger { display:flex; }
-  .menu { width: 80%; }
-  article { padding: 0.6rem; }
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-logo img {
+    width: 60px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------
+   Cookie Message (optional bonus)
+-------------------------------- */
+.cookies {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #eee;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 9999;
+  border-top: 1px solid #ccc;
 }
