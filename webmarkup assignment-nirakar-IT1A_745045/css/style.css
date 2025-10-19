@@ -73,7 +73,7 @@ header * {
 }
 
 .site-logo img {
-  width: 100px;
+  width: 120px;
   float: left;
   margin-right: 1em;
 }
@@ -124,9 +124,14 @@ header * {
   color: var(--secondary);
 }
 
+.search-bar-container {
+  margin: 1em auto;
+  max-width: 300px;
+}
+
 .search-bar {
-  margin-left: 1em;
-  padding: 0.3em 0.5em;
+  width: 100%;
+  padding: 0.5em;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
@@ -354,7 +359,7 @@ header > nav ul > li > a:hover {
   }
 
   .site-logo img {
-    width: 60px;
+    width: 80px;
   }
 
   .content-block {
@@ -364,6 +369,10 @@ header > nav ul > li > a:hover {
 
   .left-image, .right-image {
     margin: 1em 0;
+  }
+
+  .search-bar-container {
+    max-width: 100%;
   }
 }
 
