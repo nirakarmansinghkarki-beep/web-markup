@@ -1,126 +1,391 @@
-/* === GLOBAL THEME COLORS ===
-   Primary (calm blue): #A5D8F3
-   Secondary (warm yellow): #FDDFA9
-   Accent (soft coral): #F6B2A1
-*/
+/* =====================================================
+   Daycare Connect — style.css
+   Author: Nirakar (cleaned & completed)
+   ===================================================== */
 
-/* === GLOBAL STYLES === */
-body {
-  background-color: #A5D8F3;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* Google Fonts (used properly) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito+Sans&display=swap');
+
+:root {
+  --primary: #A5D8F3;
+  --secondary: #FDDFA9;
+  --accent: #F6B2A1;
+  --text: #08313B;
+  --max-width: 72rem;
+  --card-bg: #ffffff;
 }
 
-/* === HEADER === */
+/* ---------------------------
+   Global rules
+   --------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 100%;
+  background-color: var(--primary);
+  color: var(--text);
+  line-height: 1.6;        /* required */
+  word-spacing: 0.15rem;   /* required */
+  letter-spacing: 0.03rem; /* required */
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;         /* relative unit */
+}
+
+/* ---------------------------
+   Header & Logo
+   --------------------------- */
 header {
-  background-color: #FDDFA9;
-  border-bottom: 4px solid #F6B2A1;
+  background: linear-gradient(180deg, var(--primary), #d4eefc);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
+  position: relative;      /* position used */
   text-align: center;
-  padding: 1.5rem 1rem;
+}
+
+/* float used (Advanced CSS requirement) */
+.site-logo {
+  display: inline-block;
+  float: left;             /* float used */
+  margin: 0.25rem 1rem 0 1rem;
 }
 
 .site-logo img {
-  width: 180px;
+  width: 8rem;             /* relative unit */
   height: auto;
-  display: block;
-  margin: 0 auto;
+  border-radius: 0.5rem;
 }
 
-h1 {
-  color: #F6B2A1;
-  font-size: 2.2rem;
-  margin: 0.5rem 0 0.2rem 0;
+.logo-caption {
+  font-size: 0.8rem;
+  color: #333;
+  margin-top: 0.2rem;
 }
 
-p.site-tagline {
+/* site title */
+.site-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin: 0.3rem 0;
+}
+
+/* first-letter pseudo-element (Advanced CSS requirement) */
+.site-title::first-letter {
+  font-size: 2.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.site-tagline {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* ---------------------------
+   Navigation
+   --------------------------- */
+.desktop-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  clear: both;             /* clear float */
+}
+
+.desktop-menu ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-style: italic;
-  color: #555;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* === NAVIGATION === */
-nav {
+.desktop-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase; /* required */
+}
+
+/* pseudo-class mouse over link (Advanced CSS requirement) */
+nav > ul > li > a:hover {
+  background-color: var(--secondary);
+}
+
+/* pseudo-class selected/visited link (Advanced CSS requirement) */
+nav > ul > li > a:visited {
+  opacity: 0.8;
+}
+
+/* active */
+.desktop-menu a:active {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Hamburger menu (mobile) */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 1.6rem;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--text);
+  border-radius: 2px;
+}
+
+/* Mobile menu slide-in (position absolute used earlier) */
+.menu {
+  position: absolute;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--primary);
+  padding-top: 4rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* checkbox controlling menu */
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+/* ---------------------------
+   Language toggle
+   --------------------------- */
+.language-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 1rem;
+}
+
+.language-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-label {
+  background-color: var(--secondary);
+  color: var(--text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* default language display */
+.lang { display:block; }
+.en  { display:block; }
+.nl  { display:none; }
+
+/* ---------------------------
+   Main content area
+   --------------------------- */
+main {
+  max-width: var(--max-width);
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  clear: both;
+}
+
+/* Figures */
+figure {
+  margin: 1rem auto;
+  text-align: center;
+  width: 90%;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 0.75rem;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.4rem;
+}
+
+/* sample card-like article */
+article {
+  margin-bottom: 1.2rem;
+  padding: 0.8rem;
+  border: 1px solid #ddd;   /* border-width/style/color used (Advanced CSS required) */
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 0.6rem;
+}
+
+/* use > selector (Advanced CSS requirement) */
+article > h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* text indent required */
+article p {
+  text-indent: 1.2rem; /* required */
+}
+
+/* ---------------------------
+   Zip-search and forms
+   --------------------------- */
+.zip-search fieldset,
+form fieldset {
+  border: 2px solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.zip-search legend,
+form legend {
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* inputs */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 0.4rem;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 0.7rem;
+  cursor: pointer;
+  text-transform: uppercase; /* required */
+  margin-top: 0.5rem;
+}
+
+/* ---------------------------
+   Table styling (compare page)
+   using nth-child to color even/odd rows
+   (Advanced CSS requirement)
+   --------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 1rem;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+table th,
+table td {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-nav ul li {
-  display: inline-block;
+table tr:nth-child(even) {
+  background: #CFF;  /* even rows */
 }
 
-nav ul li a {
-  background-color: #F6B2A1;
-  color: white;
+table tr:nth-child(odd) {
+  background: #FFF;  /* odd rows */
+}
+
+/* ---------------------------
+   Cookie message (z-index requirement)
+   --------------------------- */
+.cookie-msg {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(255,255,255,0.95);
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  z-index: 9999; /* required */
+  border: 1px solid #ccc;
 }
 
-nav ul li a:hover {
-  background-color: #FDDFA9;
-  color: #333;
+/* ---------------------------
+   Utility selectors demonstrating "," usage
+   --------------------------- */
+h2, h3, p {
+  margin: 0.5rem 0;
 }
 
-/* === MAIN CONTENT === */
-main {
-  background-color: #fff;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* ---------------------------
+   Responsive queries (at least 2 devices)
+   Smartphone <=768px, Tablet <=1024px, Desktop >1024px
+   --------------------------- */
+@media (max-width: 1024px) {
+  html { font-size: 95%; }     /* tablet */
+  .desktop-menu { display:none; }
+  .hamburger { display:flex; }
+  .menu { width: 60%; }
+  figure { width: 95%; }
 }
 
-main h2 {
-  color: #F6B2A1;
-  border-bottom: 2px solid #FDDFA9;
-  padding-bottom: 0.5rem;
-}
-
-main img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 1rem;
-  margin: 2rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* === FOOTER === */
-footer {
-  background-color: #FDDFA9;
-  color: #333;
-  text-align: center;
-  padding: 1rem;
-  border-top: 4px solid #F6B2A1;
-  font-size: 0.9rem;
-}
-
-/* === UTILITIES === */
-.button {
-  background-color: #F6B2A1;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background-color: #FDDFA9;
-  color: #333;
+@media (max-width: 768px) {
+  html { font-size: 92%; }     /* smartphone */
+  .site-logo { float:none; display:block; margin: 0 auto 0.5rem auto; }
+  .hamburger { display:flex; }
+  .menu { width: 80%; }
+  article { padding: 0.6rem; }
 }

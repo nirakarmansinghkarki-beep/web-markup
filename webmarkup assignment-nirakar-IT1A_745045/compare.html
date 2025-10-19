@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Compare daycare centers side by side for pricing, facilities, and ratings.">
+  <meta name="keywords" content="compare,daycare,ratings,childcare,reviews">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compare local daycare centers by cost, hours, and ratings.">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Compare | Daycare Connect</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>Daycare Connect</h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
 
-<header>
-  <figure class="site-logo"><img src="/img/logo.png" alt="Daycare Connect logo" title="Daycare Connect"></figure>
-  <h1><span class="en">Compare Daycare Centers</span><span class="nl">Vergelijk Kinderopvangcentra</span></h1>
-  <p class="site-tagline"><span class="en">Find the perfect match for your family</span><span class="nl">Vind de perfecte match voor uw gezin</span></p>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="visit.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <input id="lang-toggle" type="checkbox" aria-label="Language toggle">
-  <label for="lang-toggle" class="lang-label lang-en">🇬🇧 English</label>
-  <label for="lang-toggle" class="lang-label lang-nl">🇳🇱 Nederlands</label>
+  <main>
+    <section>
+      <h2>Compare Daycare Centers</h2>
+      <p>Quickly compare essential details of the top-rated daycare centers near you.</p>
 
-  <nav class="primary">
-    <ul>
-      <li><a href="index.html"><span class="en">Home</span><span class="nl">Startpagina</span></a></li>
-      <li><a href="reviews.html"><span class="en">Reviews</span><span class="nl">Beoordelingen</span></a></li>
-      <li><a href="compare.html"><span class="en">Compare</span><span class="nl">Vergelijken</span></a></li>
-      <li><a href="profile.html"><span class="en">Profiles</span><span class="nl">Profielen</span></a></li>
-      <li><a href="visit.html"><span class="en">Visits</span><span class="nl">Bezoeken</span></a></li>
-      <li><a href="contact.html"><span class="en">Contact</span><span class="nl">Contact</span></a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2><span class="en">Side-by-Side Comparison</span><span class="nl">Vergelijking naast elkaar</span></h2>
-    <p><span class="en">Quickly compare top-rated daycare centers based on your most important criteria.</span><span class="nl">Vergelijk snel de best beoordeelde kinderopvangcentra op basis van uw belangrijkste criteria.</span></p>
-
-    <table>
-      <caption><span class="en">Daycare Comparison Table</span><span class="nl">Vergelijkingstabel Kinderopvang</span></caption>
-      <thead>
+      <table>
         <tr>
-          <th><span class="en">Center</span><span class="nl">Centrum</span></th>
-          <th><span class="en">Monthly Cost (€)</span><span class="nl">Maandelijkse Kosten (€)</span></th>
-          <th><span class="en">Hours</span><span class="nl">Uren</span></th>
-          <th><span class="en">Rating</span><span class="nl">Beoordeling</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Little Stars</td><td>900</td><td>07:30–18:00</td><td>★★★★★</td>
+          <th>Daycare Name</th>
+          <th>Age Group</th>
+          <th>Monthly Fee</th>
+          <th>Rating</th>
+          <th>Facilities</th>
         </tr>
         <tr>
-          <td>Happy Steps</td><td>850</td><td>08:00–17:30</td><td>★★★★☆</td>
+          <td>Sunshine Daycare</td>
+          <td>1–5 years</td>
+          <td>$400</td>
+          <td>★★★★★</td>
+          <td>Playground, Meals, Art Corner</td>
         </tr>
         <tr>
-          <td>Rainbow Care</td><td>950</td><td>07:00–18:30</td><td>★★★★★</td>
+          <td>Little Stars Hub</td>
+          <td>2–6 years</td>
+          <td>$380</td>
+          <td>★★★★☆</td>
+          <td>Music Room, Reading Zone</td>
         </tr>
-      </tbody>
-    </table>
+        <tr>
+          <td>Bright Minds Academy</td>
+          <td>1–4 years</td>
+          <td>$420</td>
+          <td>★★★★★</td>
+          <td>STEM Toys, Outdoor Play</td>
+        </tr>
+      </table>
 
-    <aside>
       <figure>
-        <img src="/img/compare-1.jpg" alt="Daycare comparison chart" title="Comparison chart">
-        <figcaption><span class="en">Visual guide for better decisions</span><span class="nl">Visuele gids voor betere beslissingen</span></figcaption>
+        <img src="img/compare1.jpg" alt="children on grass" title="Play Area">
+        <figcaption>Play areas frequently inspected for safety.</figcaption>
       </figure>
-      <figure>
-        <img src="/img/compare-2.jpg" alt="Parents reviewing centers" title="Parents reviewing">
-        <figcaption><span class="en">Read verified reviews</span><span class="nl">Lees geverifieerde beoordelingen</span></figcaption>
-      </figure>
-      <figure>
-        <img src="/img/compare-3.jpg" alt="Daycare facility" title="Daycare facility">
-        <figcaption><span class="en">See real photos</span><span class="nl">Bekijk echte foto's</span></figcaption>
-      </figure>
-    </aside>
-  </section>
-</main>
 
-<footer>
-  <p><span class="en">Compare centers and choose with confidence.</span><span class="nl">Vergelijk centra en kies met vertrouwen.</span></p>
-</footer>
+      <figure>
+        <img src="img/compare2.jpg" alt="daycare building exterior" title="Daycare Exterior">
+        <figcaption>Outdoor spaces and building layout.</figcaption>
+      </figure>
 
+      <figure>
+        <img src="img/compare3.jpg" alt="children in classroom" title="Classroom">
+        <figcaption>Indoor learning and play equipment.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Daycare Connect. Compare and choose wisely.
+  </footer>
 </body>
 </html>

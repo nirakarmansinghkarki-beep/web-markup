@@ -2,85 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Your Name">
-  <meta name="description" content="Read verified parent reviews and aggregated ratings for local daycare centers to help choose the right option for your child.">
-  <meta name="keywords" content="daycare reviews, parent feedback, nursery reviews, childcare ratings, Amsterdam daycares">
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Read verified reviews from parents who have enrolled their kids in local daycare centers.">
+  <meta name="keywords" content="reviews,daycare,testimonials,parents,feedback">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daycare Connect — Reviews</title>
-  <link rel="icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <script>
-    function setLanguage(lang){
-      document.documentElement.setAttribute('data-lang', lang);
-      document.querySelectorAll('.en').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
-      document.querySelectorAll('.nl').forEach(e => e.style.display = (lang==='nl') ? '' : 'none');
-    }
-    document.addEventListener('DOMContentLoaded', function(){ setLanguage('en'); });
-  </script>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Reviews | Daycare Connect</title>
 </head>
 <body>
-  <main>
-    <header role="banner">
-      <figure class="site-logo">
-        <img src="/images/daycare-logo.png" alt="Daycare Connect logo" title="Daycare Connect logo">
-        <figcaption class="logo-caption">Daycare Connect</figcaption>
-      </figure>
-      <div class="site-title">
-        <h1><span class="en">Reviews</span><span class="nl">Beoordelingen</span></h1>
-        <p class="site-tagline"><span class="en">Authentic parent reviews and ratings</span><span class="nl">Echte ouderbeoordelingen en -scores</span></p>
-      </div>
 
-      <nav class="topbar" role="navigation">
-        <button class="lang-switch" onclick="setLanguage('en')">🇬🇧 English</button>
-        <button class="lang-switch" onclick="setLanguage('nl')">🇳🇱 Nederlands</button>
-      </nav>
+  <header>
+    <h1>Daycare Connect</h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
 
-      <nav class="primary" role="navigation">
-        <ul>
-          <li><a href="/index.html"><span class="en">Home</span><span class="nl">Startpagina</span></a></li>
-          <li><a href="/reviews.html"><span class="en">Reviews</span><span class="nl">Beoordelingen</span></a></li>
-          <li><a href="/compare.html"><span class="en">Compare</span><span class="nl">Vergelijk</span></a></li>
-          <li><a href="/profile.html"><span class="en">Profiles</span><span class="nl">Profielen</span></a></li>
-          <li><a href="/visit.html"><span class="en">Schedule</span><span class="nl">Bezoeken</span></a></li>
-          <li><a href="/contact.html"><span class="en">Contact</span><span class="nl">Contact</span></a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section>
-      <h2><span class="en">Verified Reviews</span><span class="nl">Geverifieerde beoordelingen</span></h2>
-      <p><span class="en">Read recent, verified reviews from parents who visited each center.</span><span class="nl">Lees recente, geverifieerde beoordelingen van ouders die elk centrum hebben bezocht.</span></p>
-
-      <ul class="reviews" aria-live="polite">
-        <li>
-          <article>
-            <h3><span class="en">Sunshine Daycare — 4.7</span><span class="nl">Zonnestraal — 4,7</span></h3>
-            <figure>
-              <img src="/images/review-1.jpg" alt="Sunshine Daycare interior" title="Sunshine Daycare interior" width="220" height="140">
-              <figcaption><span class="en">Bright rooms and caring staff</span><span class="nl">Lichte kamers en zorgzaam personeel</span></figcaption>
-            </figure>
-            <p><strong><span class="en">“The teachers are attentive and the facility is clean.”</span><span class="nl">“De leidsters zijn aandachtig en de faciliteit is schoon.”</span></strong></p>
-            <p><span class="en">Reviewed 2 weeks ago — Verified parent</span><span class="nl">Beoordeeld 2 weken geleden — Geverifieerde ouder</span></p>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><span class="en">Happy Steps — 4.6</span><span class="nl">Blije Stapjes — 4,6</span></h3>
-            <figure>
-              <img src="/images/review-2.jpg" alt="Happy Steps play area" title="Happy Steps play area" width="220" height="140">
-              <figcaption><span class="en">Outdoor play space is excellent</span><span class="nl">Buitenspeelruimte is uitstekend</span></figcaption>
-            </figure>
-            <p><span class="en">Verified parent — quality early learning through play.</span><span class="nl">Geverifieerde ouder — kwalitatief vroeg leren door spel.</span></p>
-          </article>
-        </li>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="visit.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </section>
+    </nav>
+  </header>
 
-    <footer>
-      <p><span class="en">© 2025 Daycare Connect</span><span class="nl">© 2025 Kinderopvang Verbinden</span></p>
-    </footer>
+  <main>
+    <section>
+      <h2>Parent Reviews</h2>
+      <p>See what other parents are saying about their childcare experiences.</p>
+
+      <article>
+        <h3>“A safe and happy space” — Sarah K.</h3>
+        <p>Sunshine Daycare has been amazing for my 3-year-old! She loves her teachers and the creative playtime. Highly recommend!</p>
+        <figure>
+          <img src="img/review1.jpg" alt="teacher with children" title="Teacher and Kids">
+          <figcaption>Responsive teachers and nurturing staff.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>“Wonderful staff and communication” — Raj P.</h3>
+        <p>Little Stars Hub keeps us updated daily and provides nutritious meals. They truly care about the kids’ development.</p>
+        <figure>
+          <img src="img/review2.jpg" alt="parents talking to staff" title="Communication">
+          <figcaption>Great communication is key between parents and staff.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>“Modern and engaging” — Elena M.</h3>
+        <p>Bright Minds Academy offers STEM-based activities that my son enjoys a lot. Excellent cleanliness and safe environment!</p>
+        <figure>
+          <img src="img/review3.jpg" alt="children doing STEM activities" title="STEM Activities">
+          <figcaption>STEM and creative play combined.</figcaption>
+        </figure>
+      </article>
+
+    </section>
   </main>
+
+  <footer>
+    &copy; 2025 Daycare Connect. Honest reviews, happy parents.
+  </footer>
 </body>
 </html>

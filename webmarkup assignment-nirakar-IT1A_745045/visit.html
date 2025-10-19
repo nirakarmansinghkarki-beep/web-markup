@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Book a visit to any daycare center and experience the environment in person.">
+  <meta name="keywords" content="visit,appointment,daycare,book,schedule">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visits | Daycare Connect</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Book a Visit | Daycare Connect</title>
 </head>
 <body>
+  <header>
+    <h1>Daycare Connect</h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
 
-<header>
-  <figure class="site-logo"><img src="/img/logo.png" alt="Daycare Connect logo"></figure>
-  <h1><span class="en">Schedule a Visit</span><span class="nl">Plan een Bezoek</span></h1>
-  <p class="site-tagline"><span class="en">See the environment yourself</span><span class="nl">Zie de omgeving zelf</span></p>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="visit.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <input id="lang-toggle" type="checkbox">
-  <label for="lang-toggle" class="lang-label lang-en">🇬🇧 English</label>
-  <label for="lang-toggle" class="lang-label lang-nl">🇳🇱 Nederlands</label>
+  <main>
+    <section>
+      <h2>Book a Visit</h2>
+      <p>Interested in visiting a daycare center? Fill out the form below to schedule a visit.</p>
 
-  <nav class="primary">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="compare.html">Compare</a></li>
-      <li><a href="profile.html">Profiles</a></li>
-      <li><a href="visit.html">Visits</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Visit Request Form</legend>
 
-<main>
-  <section>
-    <h2><span class="en">Book a Tour</span><span class="nl">Boek een Rondleiding</span></h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend><span class="en">Visit Request Form</span><span class="nl">Aanvraagformulier Bezoek</span></legend>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Full Name" required>
 
-        <label for="name"><span class="en">Name:</span><span class="nl">Naam:</span></label>
-        <input id="name" name="name" type="text" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-        <label for="email"><span class="en">Email:</span><span class="nl">E-mail:</span></label>
-        <input id="email" name="email" type="email" required>
+          <label for="center">Daycare Center:</label>
+          <input type="text" id="center" name="center" placeholder="Enter center name" required>
 
-        <label for="center"><span class="en">Preferred Center:</span><span class="nl">Voorkeurscentrum:</span></label>
-        <input id="center" name="center" type="text">
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required>
 
-        <label for="date"><span class="en">Preferred Date:</span><span class="nl">Voorkeursdatum:</span></label>
-        <input id="date" name="date" type="date">
+          <input type="submit" value="Submit Request">
+        </fieldset>
+      </form>
 
-        <input type="submit" value="Submit / Verzenden">
-      </fieldset>
-    </form>
+      <figure>
+        <img src="img/book1.jpg" alt="children playing outdoors" title="Play Outdoors">
+        <figcaption>Schedule a visit to check outdoor facilities.</figcaption>
+      </figure>
 
-    <figure><img src="/img/visit-1.jpg" alt="Parents visiting daycare"><figcaption>Parents visiting</figcaption></figure>
-    <figure><img src="/img/visit-2.jpg" alt="Play area"><figcaption>Play area</figcaption></figure>
-    <figure><img src="/img/visit-3.jpg" alt="Tour guide"><figcaption>Tour guide</figcaption></figure>
-  </section>
-</main>
+      <figure>
+        <img src="img/book2.jpg" alt="playground ground" title="Playground">
+        <figcaption>Inspect safety surfaces and play equipment.</figcaption>
+      </figure>
 
-<footer>
-  <p><span class="en">Schedule your visit easily online.</span><span class="nl">Plan uw bezoek eenvoudig online.</span></p>
-</footer>
+      <figure>
+        <img src="img/book3.png" alt="children watching learning video" title="Media">
+        <figcaption>Some centers use multimedia for learning.</figcaption>
+      </figure>
 
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Daycare Connect. Schedule a visit today.
+  </footer>
 </body>
 </html>
