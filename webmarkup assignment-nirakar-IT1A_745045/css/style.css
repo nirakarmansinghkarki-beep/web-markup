@@ -1,4 +1,4 @@
-/* --------------------------------
+ /* --------------------------------
    Google Font & Root Variables
 -------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
@@ -24,6 +24,7 @@ body {
   text-align: justify;
   color: var(--text);
   padding-bottom: 3em; /* Added to prevent cookie banner overlap with content/footer */
+  text-indent: 1em;
 }
 
 img {
@@ -35,6 +36,7 @@ img {
 h1, h2 {
   color: var(--primary);
   text-align: center;
+  text-transform: uppercase;
 }
 
 h2::first-letter {
@@ -47,12 +49,6 @@ h2::first-letter {
    Header & Navigation
 -------------------------------- */
 header {
-  background: var(--accent); /* Fallback color */
-  background-image: url('img/homepage1.png');
-  background-image: url('img/review1.jpg');
-  background-image: url('img/daycare.png');
-  background-image: url('img/play2.jpg');
-  background-image: url('img/homepage1.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -135,6 +131,15 @@ header > * {
 .desktop-menu a:hover {
   color: var(--secondary);
   background: rgba(255, 255, 255, 0.1);
+}
+
+.desktop-menu a:visited {
+  color: #eee;
+}
+
+.desktop-menu .current {
+  background: var(--secondary);
+  color: var(--text);
 }
 
 /* --------------------------------
@@ -270,11 +275,11 @@ th, td {
 }
 
 tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 tr:nth-child(even) {
-  background-color: #f0f8ff;
+  background-color: #CFF;
 }
 
 table.comparison th {
@@ -310,6 +315,9 @@ fieldset {
   border: 2px solid var(--primary);
   border-radius: 10px;
   padding: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--primary);
 }
 
 legend {
@@ -356,10 +364,23 @@ footer {
   border-top: 5px solid var(--secondary);
 }
 
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+footer nav a {
+  color: white;
+  text-decoration: none;
+}
+
 /* --------------------------------
    Utility & Advanced Selectors
 -------------------------------- */
-p:first-letter {
+p::first-letter {
   font-size: 1.5em;
   font-weight: bold;
   color: var(--secondary);
@@ -368,6 +389,11 @@ p:first-letter {
 /* Descendant selector */
 header > nav ul > li > a:hover {
   text-decoration: underline;
+}
+
+/* Comma selector */
+h1, h2, h3 {
+  font-family: 'Nunito', sans-serif;
 }
 
 /* --------------------------------
@@ -432,6 +458,10 @@ header > nav ul > li > a:hover {
   table.comparison th, table.comparison td {
     padding: 0.7em;
   }
+
+  .image-container {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 769px) {
@@ -443,6 +473,11 @@ header > nav ul > li > a:hover {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -463,4 +498,54 @@ header > nav ul > li > a:hover {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Page-specific backgrounds */
+body.home header {
+  background-image: url('img/homepage1.png');
+}
+
+body.reviews header {
+  background-image: url('img/review.jpg');
+}
+
+body.compare header {
+  background-image: url('img/compare.png');
+}
+
+body.profiles header {
+  background-image: url('img/play.jpg');
+}
+
+body.visits header {
+  background-image: url('img/book.jpg');
+}
+
+body.contact header {
+  background-image: url('img/contact3.jpg');
+}
+
+/* Image styles */
+.content-image {
+  width: 200px;
+  height: auto;
+}
+
+.profile-image {
+  width: 300px;
+  height: auto;
+}
+
+.comparison-image {
+  width: 150px;
+  height: auto;
+}
+
+.profile {
+  margin-bottom: 2em;
+}
+
+.image-container figure {
+  flex: 1;
+  max-width: 45%;
 }
