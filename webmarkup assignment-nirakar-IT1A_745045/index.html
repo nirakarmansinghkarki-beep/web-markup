@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Nirakar">
-  <meta name="description" content="Daycare Connect — find, compare, and book visits to trusted daycare centers near you.">
-  <meta name="keywords" content="daycare, childcare, reviews, compare, visit">
+  <meta name="description" content="Daycare Connect — find, compare, and book visits to trusted daycare centers near you for your child’s growth and happiness.">
+  <meta name="keywords" content="daycare, childcare, reviews, compare, visit, families">
   <link rel="icon" href="img/logo.png" type="image/png">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Home | Daycare Connect</title>
 </head>
+
 <body class="home">
   <header>
     <figure class="site-logo">
@@ -17,16 +18,18 @@
     </figure>
     <h1 class="site-title">Daycare Connect</h1>
     <p class="site-tagline">Connecting families and daycare centers</p>
+    
     <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html" class="current">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="profiles.html">Profiles</a></li>
-        <li><a href="visits.html">Visits</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
@@ -36,50 +39,65 @@
         <li><a href="index.html" class="current">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="profiles.html">Profiles</a></li>
-        <li><a href="visits.html">Visits</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>Welcome to Daycare Connect</h2>
       <p>Find, compare, and book visits to <strong>trusted</strong> daycare centers near you.</p>
+
       <blockquote>
-        "A caring environment is the foundation for a child's growth and happiness." — Anke de Vries
+        "A caring environment is the foundation for a child's growth and happiness." — <em>Anke de Vries</em>
       </blockquote>
+
       <form class="search-section">
         <fieldset>
           <legend>Search by Postal Code</legend>
+
           <label for="postal-code">Enter postal code:</label>
           <input type="text" id="postal-code" name="postal-code" placeholder="e.g., 1234 AB" required>
+
+          <label for="email">Email address:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
           <input type="submit" value="Search Daycare">
         </fieldset>
       </form>
+
       <article class="content-block">
         <figure class="left-image">
           <img src="img/homepage3.jpg" alt="Mother and child playing indoors" title="Indoor Play" class="content-image">
           <figcaption>Indoor play areas promote social skills.</figcaption>
         </figure>
-        <p>Our indoor play areas are carefully designed to enhance social interaction and early development. Parents cherish moments when their children play with peers, building confidence. The cozy space is equipped with safe, colorful toys and a nurturing environment, ensuring a joyful experience every day.</p>
+        <p>Our indoor play areas are designed to enhance social interaction and early development. Parents cherish moments when their children play with peers, building confidence. The cozy space is equipped with safe, colorful toys and a nurturing environment, ensuring a joyful experience every day.</p>
       </article>
+
       <blockquote>
-        "Every child deserves a safe place to learn and grow." — Lotte Bakker
+        "Every child deserves a safe place to learn and grow." — <em>Lotte Bakker</em>
       </blockquote>
+
       <article class="content-block">
-        <figure class="left-image">
+        <figure class="right-image">
           <img src="img/homepage2.png" alt="Families in a classroom" title="Classroom" class="content-image">
           <figcaption>Bright, safe classroom for creative learning.</figcaption>
         </figure>
-        <p>Our classrooms are bright and safe, creating an inviting atmosphere for creative learning and exploration. Trusted by families, these spaces contain a variety of educational toys that spark children's curiosity. The dedicated areas support engaging activities, from group play to interactive sessions, fostering a sense of community.</p>
+        <p>Our classrooms are bright and safe, creating an inviting atmosphere for creative learning and exploration. Trusted by families, these spaces contain a variety of educational toys that spark children's curiosity. The dedicated areas support engaging activities, fostering a sense of community and joy.</p>
       </article>
+
+    </section>
   </main>
+
   <aside class="cookies" role="region" aria-label="Cookie notice">
     We use cookies to improve the site. <a href="privacy.html">More info</a>
   </aside>
+
   <footer>
-    &copy; 2025 Daycare Connect &reg; &trade;. All rights reserved. "Contact us & learn more."
+    &copy; 2025 Daycare Connect &reg; &trade;. All rights reserved. "Contact us &amp; learn more."
     <nav aria-label="Quick links">
       <ul>
         <li><a href="index.html">Home</a></li>

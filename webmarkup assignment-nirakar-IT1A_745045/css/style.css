@@ -52,39 +52,66 @@ header {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #fff;
   min-height: 500px;
   padding: 1em;
   position: relative;
   text-align: center;
-  background-color: #ccc; /* Fallback color if image fails */
+  background-color: #ccc; /* fallback */
 }
 
 body.home header {
-  background-image: url('img/homepage1.png');
+  /* ✅ Background image only on the top section */
+  background-image: url('../img/image1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
-
 body.reviews header {
-  background-image: url('img/review.jpg');
+  background-image: url('../img/review.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
+/* Compare page header */
 body.compare header {
-  background-image: url('img/compare.png');
+  background-image: url('../img/compare.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
+/* Profiles page header */
 body.profiles header {
-  background-image: url('img/play.jpg');
+  background-image: url('../img/play.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
+/* Visits page header */
 body.visits header {
-  background-image: url('img/book.jpg');
+  background-image: url('../img/book.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
+/* Contact page header */
 body.contact header {
-  background-image: url('img/contact3.jpg');
+  background-image: url('../img/contact3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
-
+/* overlay for text readability */
 header::before {
   content: '';
   position: absolute;
@@ -92,7 +119,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -221,7 +248,6 @@ header > * {
   color: var(--secondary);
 }
 
-/* Toggle mobile menu visibility */
 #menu-toggle:checked + .hamburger + .mobile-menu {
   display: block;
 }
@@ -236,7 +262,7 @@ main {
 section {
   max-width: 1000px;
   margin: auto;
-  background: #fafafa;
+  background: #fafafa; /* content block background */
   padding: 2em;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -280,55 +306,6 @@ figcaption {
   margin: 2em 0;
 }
 
-.search-section form {
-  margin: 0;
-}
-
-/* --------------------------------
-   Tables (if used)
--------------------------------- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1em 0;
-}
-
-th, td {
-  padding: 1em;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-tr:nth-child(odd) {
-  background-color: #FFF;
-}
-
-tr:nth-child(even) {
-  background-color: #CFF;
-}
-
-table.comparison th {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 1.2em;
-}
-
-table.comparison td {
-  text-align: center;
-  vertical-align: middle;
-}
-
-table.comparison img {
-  max-width: 150px;
-  height: auto;
-}
-
-table.comparison tr:hover {
-  background-color: #e6f3fa;
-  transition: background-color 0.3s;
-}
-
 /* --------------------------------
    Forms
 -------------------------------- */
@@ -340,9 +317,6 @@ fieldset {
   border: 2px solid var(--primary);
   border-radius: 10px;
   padding: 1em;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--primary);
 }
 
 legend {
@@ -403,115 +377,6 @@ footer nav a {
 }
 
 /* --------------------------------
-   Utility & Advanced Selectors
--------------------------------- */
-p::first-letter {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--secondary);
-}
-
-/* Descendant selector */
-header > nav ul > li > a:hover {
-  text-decoration: underline;
-}
-
-/* Comma selector */
-h1, h2, h3 {
-  font-family: 'Nunito', sans-serif;
-}
-
-/* --------------------------------
-   Responsive Design
--------------------------------- */
-@media (max-width: 768px) {
-  .desktop-menu {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  main {
-    padding: 1em;
-  }
-
-  section {
-    padding: 1em;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .site-logo img {
-    width: 100px;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-  }
-
-  .site-tagline {
-    font-size: 1rem;
-  }
-
-  header {
-    background-attachment: scroll;
-    min-height: 200px;
-    padding: 0.5em;
-  }
-
-  .content-block {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-image, .right-image {
-    margin: 1em 0;
-  }
-
-  table.comparison {
-    font-size: 0.85rem;
-  }
-
-  table.comparison img {
-    max-width: 100px;
-  }
-
-  table.comparison th, table.comparison td {
-    padding: 0.7em;
-  }
-
-  .image-container {
-    flex-direction: column;
-  }
-
-  .site-logo {
-    position: static;
-    text-align: left;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-menu {
-    display: none !important;
-  }
-
-  .desktop-menu ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .image-container {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-/* --------------------------------
    Cookie Message
 -------------------------------- */
 .cookies {
@@ -553,4 +418,71 @@ h1, h2, h3 {
 .image-container figure {
   flex: 1;
   max-width: 45%;
+}
+
+/* --------------------------------
+   Responsive Design
+-------------------------------- */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-logo img {
+    width: 100px;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .site-tagline {
+    font-size: 1rem;
+  }
+
+  header {
+    min-height: 200px;
+  }
+
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-image, .right-image {
+    margin: 1em 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+  }
 }
