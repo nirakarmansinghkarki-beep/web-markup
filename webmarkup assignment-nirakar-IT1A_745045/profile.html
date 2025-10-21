@@ -10,89 +10,95 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Profiles | Daycare Connect</title>
 </head>
-<body>
-  <div class="container">
-    <header style="background-image: url('img/play.jpg');">
-      <figure class="site-logo">
-        <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo" style="width: 140px;">
-      </figure>
-      <h1 class="site-title">Daycare Connect</h1>
-      <p class="site-tagline">Connecting families and care centers</p>
-      <nav class="desktop-menu" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="compare.html">Compare</a></li>
-          <li><a href="profile.html">Profiles</a></li>
-          <li><a href="visit.html">Visits</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="hamburger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-      <nav class="mobile-menu" aria-label="Mobile navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="compare.html">Compare</a></li>
-          <li><a href="profile.html">Profiles</a></li>
-          <li><a href="visit.html">Visits</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section>
-        <h2>Daycare Profiles</h2>
-        <p>Explore detailed profiles of our featured daycare centers, including photos and parent reviews.</p>
-
-        <article class="profile">
-          <h3>Happy Tots Daycare</h3>
-          <figure>
-            <img src="img/profile1.jpg" alt="Children running on grass at Happy Tots with playhouse and slide" title="Happy Tots Playground" style="width: 300px; height: auto;">
-            <figcaption>Outdoor fun at Happy Tots Daycare</figcaption>
-          </figure>
-          <p>Happy Tots offers a vibrant outdoor environment with STEM-focused activities for children aged 2-5. Located in Cityville, it emphasizes learning through play.</p>
-          <h4>Parent Reviews</h4>
-          <blockquote>"My child loves the outdoor adventures here! The staff is amazing." - Sarah M.</blockquote>
-          <blockquote>"Great facilities and educational programs. Highly recommend!" - John D.</blockquote>
-          <blockquote>"A safe and fun place for kids to grow." - Emily R.</blockquote>
-        </article>
-
-        <article class="profile">
-          <h3>Little Learners Center</h3>
-          <figure>
-            <img src="img/profile2.jpg" alt="Group of children playing on grass at Little Learners with building in background" title="Little Learners Play Area" style="width: 300px; height: auto;">
-            <figcaption>Playtime at Little Learners Center</figcaption>
-          </figure>
-          <p>Little Learners focuses on art and small group activities for ages 1-4. Situated in Createtown, it provides a nurturing space for early development.</p>
-          <h4>Parent Reviews</h4>
-          <blockquote>"The art classes spark my kid's creativity every day!" - Lisa K.</blockquote>
-          <blockquote>"Warm and caring environment with excellent teachers." - Michael T.</blockquote>
-          <blockquote>"Perfect for building social skills in small groups." - Anna P.</blockquote>
-        </article>
-
-        <article class="profile">
-          <h3>Sunshine Kids Daycare</h3>
-          <figure>
-            <img src="img/profile3.jpg" alt="Children on playground with slides and climbing equipment at Sunshine Kids" title="Sunshine Kids Playground" style="width: 300px; height: auto;">
-            <figcaption>Adventure playground at Sunshine Kids Daycare</figcaption>
-          </figure>
-          <p>Sunshine Kids features music lessons and extended hours for children 6 months to 5 years. Based in Playburg, it promotes joyful learning and exploration.</p>
-          <h4>Parent Reviews</h4>
-          <blockquote>"The music program is fantastic and the hours are so convenient!" - David S.</blockquote>
-          <blockquote>"My toddler thrives in this energetic setting." - Rachel L.</blockquote>
-          <blockquote>"Top-notch care with fun activities all day long." - Tom B.</blockquote>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 Daycare Connect. All rights reserved.
-    </footer>
-  </div>
+<body class="profiles">
+  <header>
+    <figure class="site-logo">
+      <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
+    </figure>
+    <h1 class="site-title">Daycare Connect Profiles</h1>
+    <p class="site-tagline">Detailed insights into care centers</p>
+    <nav class="desktop-menu" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html" class="current">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html" class="current">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Daycare Profiles</h2>
+      <p>Explore detailed profiles of our featured daycare centers, including photos, programs, staff qualifications, and parent reviews.</p>
+      <article class="profile">
+        <h3>Happy Tots Daycare</h3>
+        <figure>
+          <img src="img/profile1.jpg" alt="Children running on grass at Happy Tots with playhouse and slide" title="Happy Tots Playground" class="profile-image">
+          <figcaption>Outdoor fun at Happy Tots Daycare</figcaption>
+        </figure>
+        <p>Happy Tots offers a vibrant outdoor environment with STEM-focused activities for children aged 2-5. Located in Cityville, it emphasizes learning through play. Our certified staff includes early childhood educators with over 10 years of experience, providing a safe and stimulating environment with a low child-to-teacher ratio.</p>
+        <h4>Parent Reviews</h4>
+        <blockquote>"My child loves the outdoor adventures here! The staff is amazing." - Sarah M.</blockquote>
+        <blockquote>"Great facilities and educational programs. Highly recommend!" - John D.</blockquote>
+        <blockquote>"A safe and fun place for kids to grow." - Emily R.</blockquote>
+      </article>
+      <article class="profile">
+        <h3>Little Learners Center</h3>
+        <figure>
+          <img src="img/profile2.jpg" alt="Group of children playing on grass at Little Learners with building in background" title="Little Learners Play Area" class="profile-image">
+          <figcaption>Playtime at Little Learners Center</figcaption>
+        </figure>
+        <p>Little Learners focuses on art and small group activities for ages 1-4. Situated in Createtown, it provides a nurturing space for early development. The center boasts art specialists and bilingual staff, offering programs in creative arts, language development, and sensory play to foster holistic growth.</p>
+        <h4>Parent Reviews</h4>
+        <blockquote>"The art classes spark my kid's creativity every day!" - Lisa K.</blockquote>
+        <blockquote>"Warm and caring environment with excellent teachers." - Michael T.</blockquote>
+        <blockquote>"Perfect for building social skills in small groups." - Anna P.</blockquote>
+      </article>
+      <article class="profile">
+        <h3>Sunshine Kids Daycare</h3>
+        <figure>
+          <img src="img/profile3.jpg" alt="Children on playground with slides and climbing equipment at Sunshine Kids" title="Sunshine Kids Playground" class="profile-image">
+          <figcaption>Adventure playground at Sunshine Kids Daycare</figcaption>
+        </figure>
+        <p>Sunshine Kids features music lessons and extended hours for children 6 months to 5 years. Based in Playburg, it promotes joyful learning and exploration. With music therapists on staff and flexible scheduling options, the center supports working families while emphasizing emotional and cognitive development through play-based curricula.</p>
+        <h4>Parent Reviews</h4>
+        <blockquote>"The music program is fantastic and the hours are so convenient!" - David S.</blockquote>
+        <blockquote>"My toddler thrives in this energetic setting." - Rachel L.</blockquote>
+        <blockquote>"Top-notch care with fun activities all day long." - Tom B.</blockquote>
+      </article>
+    </section>
+  </main>
+  <aside class="cookies" role="region" aria-label="Cookie message">
+    We use cookies to improve the site. <a href="privacy.html">More info</a>
+  </aside>
+  <footer>
+    &copy; 2025 Daycare Connect. All rights reserved.
+    <nav aria-label="Quick links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>

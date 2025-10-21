@@ -10,80 +10,82 @@
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-  <div class="container">
-    <header style="background-image: url('img/contact3.jpg');">
-      <figure class="site-logo">
-        <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
-        <figcaption>Daycare Connect Logo</figcaption>
-      </figure>
-       <h1 class="site-title">Daycare Connect</h1>
-    <p class="site-tagline">Connecting families and care centers</p>
-
+<body class="contact">
+  <header>
+    <figure class="site-logo">
+      <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
+    </figure>
+    <h1 class="site-title">Daycare Connect Contact</h1>
+    <p class="site-tagline">We're here to help</p>
     <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="profile.html">Profiles</a></li>
-        <li><a href="visit.html">Visits</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
       </ul>
     </nav>
-
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
-
     <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-         <li><a href="compare.html">Compare</a></li>
-        <li><a href="profile.html">Profiles</a></li>
-        <li><a href="visit.html">Visits</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
       </ul>
     </nav>
   </header>
-
-
-    <main>
-      <section>
-        <h2>Reach Out</h2>
-        <p>Have questions or suggestions? Use the form below to get in touch with our friendly support team.</p>
-
-        <blockquote>“Communication builds connection.”</blockquote>
-
-        <form class="visit-form" action="/contact-submit" method="post">
-          <fieldset>
-            <legend>Send a Message</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <input type="submit" value="Submit">
-          </fieldset>
-        </form>
-
+  <main>
+    <section>
+      <h2>Reach Out</h2>
+      <p>Have questions or suggestions? Use the form below to get in touch with our <strong>friendly</strong> support team.</p>
+      <blockquote>“Communication builds connection.” - Daycare Connect</blockquote>
+      <form class="visit-form" action="/contact-submit" method="post">
+        <fieldset>
+          <legend>Send a Message</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+      <article class="image-container">
         <figure>
-          <img src="img/contact2.png" alt="Support team" title="Customer support">
+          <img src="img/contact2.png" alt="Support team" title="Customer support" class="content-image">
           <figcaption>Friendly support team ready to help.</figcaption>
         </figure>
-
         <figure>
-          <img src="img/contact1.jpg" alt="Children playing" title="Playtime">
+          <img src="img/contact1.jpg" alt="Children playing" title="Playtime" class="content-image">
           <figcaption>Playtime brings smiles and laughter.</figcaption>
         </figure>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Daycare Connect. All rights reserved.</p>
-    </footer>
-  </div>
+      </article>
+    </section>
+  </main>
+  <aside class="cookies" role="region" aria-label="Cookie message">
+    We use cookies to improve the site. <a href="privacy.html">More info</a>
+  </aside>
+  <footer>
+    &copy; 2025 Daycare Connect. All rights reserved.
+    <nav aria-label="Quick links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="visits.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>
