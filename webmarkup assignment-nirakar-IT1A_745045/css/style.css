@@ -265,7 +265,7 @@ header > * {
 /* --------------------------------
    Main Content
 -------------------------------- */
-mmain {
+main {
   padding: 2em;
 }
 
@@ -289,24 +289,14 @@ blockquote {
 
 .content-block {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align at the top for consistent line alignment */
+  gap: 2em; /* Space between image and text */
   margin: 3em 0;
-  gap: 2em;
 }
 
-.content-block::after {
-  content: "";
-  display: table;
-  clear: both; /* Ensure floated elements are cleared */
-}
-
-.left-image, .right-image {
-  float: none; /* Remove float to rely on flex alignment */
-  margin: 0 1em 0 0; /* Consistent margin for left image */
-}
-
-.right-image {
-  margin: 0 0 0 1em; /* Consistent margin for right image */
+.content-block > figure {
+  flex: 0 0 200px; /* Fixed width for image to ensure consistent sizing */
+  margin: 0;
 }
 
 .content-block > p {
@@ -509,14 +499,15 @@ footer nav a {
   }
 
   .content-block {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center; /* Center align stacked items */
     gap: 1em;
   }
 
-  .left-image, .right-image {
-    float: none;
-    margin: 1em 0;
+  .content-block > figure {
+    width: 100%; /* Full width on mobile */
+    max-width: 200px; /* Limit image size */
+    margin: 0 auto; /* Center the image */
   }
 
   .comparison th, .comparison td {
