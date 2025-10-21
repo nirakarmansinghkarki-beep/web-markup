@@ -2,31 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Nirakar">
-  <meta name="description" content="Read family reviews and testimonials about trusted daycare centers.">
-  <meta name="keywords" content="daycare,reviews,testimonials,family,trust">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Daycare Connect - Family Reviews">
-  <meta property="og:description" content="Read trusted family reviews and testimonials about daycare centers at Daycare Connect.">
-  <meta property="og:image" content="img/logo.png">
-  <meta property="og:url" content="https://www.daycareconnect.com/reviews">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Daycare Connect | Reviews</title>
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Daycare Connect — read trusted parent reviews and insights about local daycare centers.">
+  <meta name="keywords" content="daycare,childcare,reviews,insights,parents">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Reviews | Daycare Connect</title>
 </head>
 <body>
-  <header class="reviews">
-    <section class="site-brand">
-      <figure class="site-logo">
-        <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
-        <figcaption>Daycare Connect Logo</figcaption>
-      </figure>
-      <section class="site-heading">
-        <h1 class="site-title">Family Reviews</h1>
-        <p class="site-tagline">Trusted Voices. Honest Feedback.</p>
-      </section>
-    </section>
+  <header style="background-image: url('img/review1.jpg');">
+    <figure class="site-logo">
+      <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo" style="width: 140px;">
+    </figure>
+
+    <h1 class="site-title">Daycare Connect</h1>
+    <p class="site-tagline">Connecting families and care centers</p>
+
     <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -35,12 +27,13 @@
         <li><a href="visit.html">Visits</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <input type="text" placeholder="Search..." class="search-bar" aria-label="Search site">
     </nav>
+
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger" aria-label="Toggle mobile menu">
+    <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
+
     <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -49,45 +42,38 @@
         <li><a href="visit.html">Visits</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <input type="text" placeholder="Search..." class="search-bar" aria-label="Mobile search">
     </nav>
   </header>
+
   <main>
     <section>
-      <article>
-        <h2>What Families Say</h2>
-        <p><em>Parents trust us</em> because we connect them with <strong>authentic experiences</strong>. See what families are saying about their daycare journeys.</p>
-        <blockquote>“My daughter loves her daycare! The staff are <strong>amazing</strong>.”</blockquote>
-        <figure>
-          <img src="img/review2.jpg" alt="Parents with children" title="Happy family">
-          <figcaption>Smiling parents sharing their experience.</figcaption>
+      <h2>Parent Reviews</h2>
+      <p>Discover what parents are saying about local daycare centers.</p>
+
+      <article class="content-block">
+        <figure class="left-image">
+          <img src="img/review2.jpg" alt="Teacher playing guitar with children" title="Music Session" style="width: 200px; height: auto;">
+          <figcaption>A joyful music session with children.</figcaption>
         </figure>
-        <figure>
-          <img src="img/review3.jpg" alt="Teacher reading" title="Daycare teacher reading">
-          <figcaption>Teachers dedicated to growth and joy.</figcaption>
-        </figure>
+        <p>Parents love the engaging music sessions where a teacher plays the guitar, fostering creativity and bonding. This activity helps children develop rhythm and social skills in a warm, supportive environment, making it a highlight of their daycare experience.</p>
       </article>
-      <aside>
-        <h2>Parent Reviews Summary</h2>
-        <p>Collected reviews help other parents make <strong>informed decisions</strong>. Filter by age group, distance, or keywords to discover the <em>best matches</em> for your family.</p>
-      </aside>
-      <form class="filter-section" action="/filter-reviews" method="get">
-        <fieldset>
-          <legend>Filter Reviews</legend>
-          <label for="age-group">Age Group:</label>
-          <input type="text" id="age-group" name="age-group" placeholder="e.g., Toddler">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="e.g., parent@example.com" required>
-          <input type="submit" value="Search">
-        </fieldset>
-      </form>
+
+      <article class="content-block">
+        <figure class="left-image">
+          <img src="img/review3.jpg" alt="Children drawing with a teacher" title="Art Activity" style="width: 200px; height: auto;">
+          <figcaption>Children exploring art with a teacher.</figcaption>
+        </figure>
+        <p>Families praise the art activities where children draw alongside a dedicated teacher. This hands-on experience encourages self-expression and fine motor skills, creating a nurturing space that parents trust for their child’s growth.</p>
+      </article>
     </section>
   </main>
+
   <aside class="cookies" role="region" aria-label="Cookie message">
     We use cookies to improve the site. <a href="privacy.html">More info</a>
   </aside>
+
   <footer>
-    <p>&copy; 2025 Daycare Connect. All rights reserved.</p>
+    &copy; 2025 Daycare Connect. All rights reserved.
   </footer>
 </body>
 </html>

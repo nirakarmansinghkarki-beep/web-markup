@@ -2,22 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Your Name">
-  <meta name="description" content="Read trusted parent reviews about local daycare centers and find the best match for your child.">
-  <meta name="keywords" content="reviews, daycare, families, experiences, ratings">
-  <title>Daycare Connect | Reviews</title>
-  <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Daycare Connect — compare local daycare centers side by side with details and reviews.">
+  <meta name="keywords" content="daycare,childcare,compare,profiles,reviews">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Compare | Daycare Connect</title>
 </head>
 <body>
-  <header>
+  <header style="background-image: url('img/compare1.jpg');">
     <figure class="site-logo">
-      <img src="img/logo.png" alt="Daycare Connect Logo" title="Daycare Connect Logo">
-      <figcaption>Daycare Connect</figcaption>
+      <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo" style="width: 140px;">
     </figure>
-    <h1 class="site-title">Parent Reviews</h1>
-    <p class="site-tagline">Real experiences. Honest opinions.</p>
-    <nav>
+
+    <h1 class="site-title">Daycare Connect</h1>
+    <p class="site-tagline">Connecting families and care centers</p>
+
+    <nav class="desktop-menu" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="visit.html">Visits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="reviews.html">Reviews</a></li>
@@ -30,18 +47,89 @@
 
   <main>
     <section>
-      <h2>Recent Reviews</h2>
-      <table>
-        <tr><th>Parent</th><th>Daycare</th><th>Rating</th></tr>
-        <tr><td>Emma J.</td><td>Happy Tots</td><td>★★★★★</td></tr>
-        <tr><td>Mark S.</td><td>Little Learners</td><td>★★★★☆</td></tr>
-        <tr><td>Sara B.</td><td>Sunshine Kids</td><td>★★★★★</td></tr>
+      <h2>Compare Daycares</h2>
+      <p>Side-by-side comparison of selected daycare centers. Click on the names to view detailed reviews.</p>
+
+      <table class="comparison">
+        <tr>
+          <th>Attribute</th>
+          <th>Sunny Kids Daycare</th>
+          <th>Creative Play Center</th>
+          <th>Adventure Courtyard Daycare</th>
+        </tr>
+        <tr>
+          <td>Image</td>
+          <td>
+            <figure>
+              <img src="img/compare3.jpg" alt="Sunny Kids Daycare exterior" title="Sunny Kids Daycare" style="width: 200px; height: auto;">
+              <figcaption>Exterior view with playground.</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="img/compare2.jpg" alt="Creative Play Center art room" title="Creative Play Center" style="width: 200px; height: auto;">
+              <figcaption>Indoor art activity area.</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="img/compare1.jpg" alt="Adventure Courtyard Daycare courtyard" title="Adventure Courtyard Daycare" style="width: 200px; height: auto;">
+              <figcaption>Outdoor courtyard for play.</figcaption>
+            </figure>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><a href="reviews.html">Sunny Kids Daycare</a></td>
+          <td><a href="reviews.html">Creative Play Center</a></td>
+          <td><a href="reviews.html">Adventure Courtyard Daycare</a></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>123 Sunshine Ave, Cityville, 12345</td>
+          <td>456 Art St, Createtown, 67890</td>
+          <td>789 Adventure Rd, Playburg, 11223</td>
+        </tr>
+        <tr>
+          <td>Rating</td>
+          <td>4.8 / 5</td>
+          <td>4.5 / 5</td>
+          <td>4.7 / 5</td>
+        </tr>
+        <tr>
+          <td>Age Group</td>
+          <td>6 months - 5 years</td>
+          <td>1 - 6 years</td>
+          <td>2 - 5 years</td>
+        </tr>
+        <tr>
+          <td>Hours</td>
+          <td>7 AM - 6 PM</td>
+          <td>8 AM - 5 PM</td>
+          <td>7:30 AM - 5:30 PM</td>
+        </tr>
+        <tr>
+          <td>Features</td>
+          <td>Outdoor playground, nutritious meals, educational programs</td>
+          <td>Art and craft focus, music classes, indoor play areas</td>
+          <td>Adventure-based learning, nature exploration, group activities</td>
+        </tr>
+        <tr>
+          <td>Review</td>
+          <td><a href="reviews.html">View Reviews</a></td>
+          <td><a href="reviews.html">View Reviews</a></td>
+          <td><a href="reviews.html">View Reviews</a></td>
+        </tr>
       </table>
     </section>
   </main>
 
+  <aside class="cookies" role="region" aria-label="Cookie message">
+    We use cookies to improve the site. <a href="privacy.html">More info</a>
+  </aside>
+
   <footer>
-    <p>&copy; 2025 Daycare Connect. All rights reserved.</p>
+    &copy; 2025 Daycare Connect. All rights reserved.
   </footer>
 </body>
 </html>
