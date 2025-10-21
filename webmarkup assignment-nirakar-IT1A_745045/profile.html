@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Your Full Name">
-  <meta name="description" content="Explore daycare center profiles and learn about their values, activities, and facilities.">
-  <meta name="keywords" content="daycare, profile, learning, play, education">
+  <meta name="author" content="Nirakar">
+  <meta name="description" content="Compare daycare centers based on parent reviews, ratings, and features.">
+  <meta name="keywords" content="daycare,compare,reviews,ratings,features">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daycare Connect | Profiles</title>
+  <meta property="og:title" content="Daycare Connect - Compare Daycares">
+  <meta property="og:description" content="Compare daycare centers with parent reviews and ratings at Daycare Connect.">
+  <meta property="og:image" content="img/logo.png">
+  <meta property="og:url" content="https://www.daycareconnect.com/compare">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Daycare Connect | Compare</title>
 </head>
-
 <body>
-  <header>
-    <img src="img/profile1.jpg" alt="Daycare building" title="Daycare Profile" class="header-img">
-
-    <div class="site-brand">
+  <header class="compare">
+    <section class="site-brand">
       <figure class="site-logo">
-        <img src="img/logo.png" alt="Daycare Connect logo" title="Daycare Connect Logo">
+        <img src="img/logo.png" alt="Daycare Connect Logo" title="Daycare Connect Logo">
         <figcaption>Daycare Connect Logo</figcaption>
       </figure>
-
-      <div class="site-heading">
-        <h1 class="site-title">Our Daycare Profiles</h1>
-        <p class="site-tagline">Where every center is special</p>
-      </div>
-    </div>
-
+      <section class="site-heading">
+        <h1 class="site-title">Compare Daycares</h1>
+        <p class="site-tagline"><em>Real</em> comparisons. <strong>Honest</strong> choices.</p>
+      </section>
+    </section>
     <nav class="desktop-menu" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -37,10 +37,10 @@
       </ul>
       <input type="text" placeholder="Search..." class="search-bar" aria-label="Search site">
     </nav>
-
-    <input type="checkbox" id="menu-toggle" aria-hidden="true">
-    <label for="menu-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
-
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle mobile menu">
+      <span></span><span></span><span></span>
+    </label>
     <nav class="mobile-menu" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -52,28 +52,40 @@
       <input type="text" placeholder="Search..." class="search-bar" aria-label="Mobile search">
     </nav>
   </header>
-
   <main>
     <section>
-      <h2>Meet Our Partner Centers</h2>
-      <p>Each daycare is carefully selected for its values, safety, and learning environment. <strong>Quality care builds bright futures.</strong></p>
-
-      <blockquote>“A safe space is the first step toward confidence.”</blockquote>
-
-      <figure>
-        <img src="img/profile2.jpg" alt="Playground" title="Outdoor fun">
-        <figcaption>Spacious play areas for children.</figcaption>
-      </figure>
-
-      <figure>
-        <img src="img/profile3.jpg" alt="Children outdoors" title="Active learning">
-        <figcaption>Active learning beyond the classroom.</figcaption>
-      </figure>
+      <article>
+        <h2>Compare Daycare Centers</h2>
+        <p><em>Compare</em> daycares based on <strong>ratings</strong>, features, and parent feedback.</p>
+        <table>
+          <tr><th>Daycare</th><th>Rating</th><th>Features</th></tr>
+          <tr><td>Happy Tots</td><td>★★★★★</td><td>Outdoor play, STEM programs</td></tr>
+          <tr><td>Little Learners</td><td>★★★★☆</td><td>Art classes, small groups</td></tr>
+          <tr><td>Sunshine Kids</td><td>★★★★★</td><td>Music lessons, extended hours</td></tr>
+        </table>
+      </article>
+      <aside>
+        <h2>Comparison Tips</h2>
+        <p>Use our <strong>comparison tool</strong> to find the <em>best daycare</em> for your child.</p>
+      </aside>
+      <form class="filter-section" action="/compare-daycares" method="get">
+        <fieldset>
+          <legend>Compare Daycares</legend>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., New York">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="e.g., parent@example.com" required>
+          <input type="submit" value="Search">
+        </fieldset>
+      </form>
     </section>
   </main>
-
+  <aside class="cookies" role="region" aria-label="Cookie message">
+    We use cookies to improve the site. <a href="privacy.html">More info</a>
+  </aside>
   <footer>
     <p>&copy; 2025 Daycare Connect. All rights reserved.</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

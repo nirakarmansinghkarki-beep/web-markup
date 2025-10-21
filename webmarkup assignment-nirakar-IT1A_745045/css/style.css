@@ -23,7 +23,7 @@ body {
   word-spacing: 0.1em;
   text-align: justify;
   color: var(--text);
-  padding-bottom: 3em; /* Added to prevent cookie banner overlap with content/footer */
+  padding-bottom: 3em;
 }
 
 img {
@@ -43,6 +43,10 @@ h2::first-letter {
   color: var(--secondary);
 }
 
+p {
+  text-indent: 1em;
+}
+
 /* --------------------------------
    Header & Navigation
 -------------------------------- */
@@ -51,17 +55,36 @@ header {
   padding: 1em;
   text-align: center;
   position: relative;
-  background-image: url('img/homepage1.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
-  min-height: 300px; /* Adjusted for better image visibility */
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+header.index {
+  background-image: url('img/homepage1.png');
+}
+
+header.reviews, header.compare {
+  background-image: url('img/review1.jpg');
+}
+
+header.profiles {
+  background-image: url('img/profile1.jpg');
+}
+
+header.visit {
+  background-image: url('img/compare1.jpg');
+}
+
+header.contact {
+  background-image: url('img/contact1.jpg');
 }
 
 header::before {
@@ -71,13 +94,26 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Gradient overlay for text readability */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   z-index: 0;
 }
 
 header > * {
   position: relative;
   z-index: 1;
+}
+
+@supports not (background-attachment: fixed) {
+  header {
+    background-attachment: scroll;
+  }
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
 .site-logo img {
@@ -90,7 +126,7 @@ header > * {
   font-size: 2.5rem;
   margin: 0.5em 0;
   font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add shadow for readability */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .site-tagline {
@@ -98,7 +134,7 @@ header > * {
   font-size: 1.2rem;
   color: var(--secondary);
   margin: 0.5em 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* --------------------------------
@@ -131,6 +167,11 @@ header > * {
 .desktop-menu a:hover {
   color: var(--secondary);
   background: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
+}
+
+.desktop-menu a:visited {
+  color: #e6f3ff;
 }
 
 /* --------------------------------
@@ -153,6 +194,18 @@ header > * {
   height: 3px;
   border-radius: 2px;
   transition: all 0.3s;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
 #menu-toggle {
@@ -183,7 +236,10 @@ header > * {
   color: var(--secondary);
 }
 
-/* Toggle mobile menu visibility */
+.mobile-menu a:visited {
+  color: #e6f3ff;
+}
+
 #menu-toggle:checked + .hamburger + .mobile-menu {
   display: block;
 }
@@ -238,16 +294,16 @@ figcaption {
   margin-top: 0.3em;
 }
 
-.search-section {
+.search-section, .filter-section {
   margin: 2em 0;
 }
 
-.search-section form {
+.search-section form, .filter-section form {
   margin: 0;
 }
 
 /* --------------------------------
-   Tables (if used)
+   Tables
 -------------------------------- */
 table {
   width: 100%;
@@ -335,8 +391,7 @@ p:first-letter {
   color: var(--secondary);
 }
 
-/* Descendant selector */
-header > nav ul > li > a:hover {
+.desktop-menu a:hover, .mobile-menu a:hover {
   text-decoration: underline;
 }
 
@@ -387,6 +442,15 @@ header > nav ul > li > a:hover {
     text-align: center;
   }
 
+  .site-brand {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-logo img {
+    float: none;
+  }
+
   .left-image, .right-image {
     margin: 1em 0;
   }
@@ -421,4 +485,16 @@ header > nav ul > li > a:hover {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --------------------------------
+   Search Bar
+-------------------------------- */
+.search-bar {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
