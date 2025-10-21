@@ -61,6 +61,30 @@ header {
   background-color: #ccc; /* Fallback color if image fails */
 }
 
+body.home header {
+  background-image: url('img/homepage1.png');
+}
+
+body.reviews header {
+  background-image: url('img/review.jpg');
+}
+
+body.compare header {
+  background-image: url('img/compare.png');
+}
+
+body.profiles header {
+  background-image: url('img/play.jpg');
+}
+
+body.visits header {
+  background-image: url('img/book.jpg');
+}
+
+body.contact header {
+  background-image: url('img/contact3.jpg');
+}
+
 header::before {
   content: '';
   position: absolute;
@@ -504,31 +528,6 @@ h1, h2, h3 {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Page-specific backgrounds */
-body.home header {
-  background-image: url('/image/homepage1.png');
-}
-
-body.reviews header {
-  background-image: url('/image/review.jpg');
-}
-
-body.compare header {
-  background-image: url('/image/compare.png');
-}
-
-body.profiles header {
-  background-image: url('/image/play.jpg');
-}
-
-body.visits header {
-  background-image: url('/image/book.jpg');
-}
-
-body.contact header {
-  background-image: url('/image/contact3.jpg');
 }
 
 /* Image styles */
