@@ -1,5 +1,11 @@
 Student name: Nirakar Man Singh Karki
 Student number: 745045
 Student class: IT1A
-GitHub Repository: your github repository URL
-GitHub Pages URL: your github pages URL
+GitHub Repository: https://github.com/nirakarmansinghkarki-beep/web-markup/tree/main/webmarkup%20assignment-nirakar-IT1A_745045
+GitHub Pages URL: 
+Index-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/index.html
+Review-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/reviews.html
+Compare-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/compare.html
+Profile-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/profile.html
+Visit-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/visit.html
+Contact-https://github.com/nirakarmansinghkarki-beep/web-markup/blob/main/webmarkup%20assignment-nirakar-IT1A_745045/contact.html
